@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			li{list-style-type: none;margin: 0px;padding: 0px;font-family: "微软雅黑"}
+			ul{margin: 0;padding: 0;}
+
+            /**********行程**********/
+
+            .xingcheng_div{
+                width: 100%;
+                /*height: 350px;*/
+                /*background-color: moccasin;*/
+            }
+            .xingcheng_ul{
+                width: 96%;
+                height: 160px;
+                /*background-color:#ee827c;*/
+                margin-left: 2%;
+                /*margin-top: 4%;*/
+                border-radius: 5px;
+            }
+            .xingcheng_li{
+                width: 100%;
+                /*background-color: #0CEA87;*/
+                height: 30px;
+                margin-top: 2%;
+            }
+            .xingcheng_li>span{color: whitesmoke}
+            .xingcheng_li>h3{float: left;color: whitesmoke;margin:2%}
+            .xingcheng_li>h4{float: left;color: whitesmoke;margin:2%}
+            .xingcheng_type{
+                margin-left: 2%;
+                line-height: 27px;
+                color: whitesmoke;
+            }
+            .mui-table-view-cell{
+                padding: 0px;
+                margin-top: 4%;
+            }
+            /************************/
+		</style>
+	</head>
+    <body>
+    <header id="header" class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">行程管理</h1>
+        <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">编辑</button>
+    </header>
+    
+    <div class="mui-content" style="height:100%">
+
+									<div class="xingcheng_div">
+                                        <ul>
+                                       <!--火车票-->
+                                           <li class="mui-table-view-cell">
+                                               <div class="mui-slider-right mui-disabled">
+                                                   <a class="mui-btn mui-btn-red">删除</a>
+                                               </div>
+                                               <div class="mui-slider-handle">
+                                                   <ul class="xingcheng_ul" style="background-color:#ee827c ">
+                                                       <li class="xingcheng_li" style="margin-top: 0px" ><span class="xingcheng_type">火车票</span>  </li>
+                                                       <hr style="border: white dashed 1px;margin: 0px">
+                                                       <li class="xingcheng_li">
+                                                           <h3 style="margin-left: 15%">汉口</h3>
+                                                           <span style="float: left;margin-left: 10%;padding-top: 10px;">D3028</span>
+                                                           <h3 style="margin-left: 10%">上海虹桥</h3>
+                                                       </li>
+                                                       <li class="xingcheng_li">
+                                                           <h4 style="margin-left: 15%">07:20</h4>
+                                                           <span style="float: left;margin-left: 7%;padding-top: 5px;">10-12 周四</span>
+                                                           <h4 style="margin-left: 10%">13:05</h4>
+                                                      </li>
+                                                       <li class="xingcheng_li">
+                                                           <h4 style="margin-left: 15%">乘车人：Gloria</h4>
+                                                           <h4 style="margin-left: 10%">票价：262￥</h4>
+                                                       </li>
+                                                   </ul>
+                                               </div>
+                                           </li>
+                <!--酒店-->
+                                           <li class="mui-table-view-cell">
+                                               <div class="mui-slider-right mui-disabled">
+                                                   <a class="mui-btn mui-btn-red">删除</a>
+                                              </div>
+                                              <div class="mui-slider-handle">
+                                                  <ul class="xingcheng_ul" style="background-color:#a59aca">
+                                                      <li class="xingcheng_li" style="margin-top: 0px" ><span class="xingcheng_type">酒店</span>  </li>
+                                                      <hr style="border: white dashed 1px;margin: 0px">
+                                                      <li class="xingcheng_li">
+                                                          <h3 style="margin-left: 15%">上海卓美亚喜马拉雅酒店</h3>
+                                                      </li>
+                                                      <li class="xingcheng_li">
+                                                          <h4 style="margin-left: 15%">入住时间：10-12</h4>
+                                                      </li>
+                                                      <li class="xingcheng_li"><h4 style="margin-left: 15%">地点：浦东新区梅花路1108号</h4> </li>
+                                                 </ul>
+                                              </div>
+                                          </li>
+                                          <!--景点-->
+                                          <li class="mui-table-view-cell">
+                                              <div class="mui-slider-right mui-disabled">
+                                                  <a class="mui-btn mui-btn-red">删除</a>
+                                              </div>
+                                              <div class="mui-slider-handle">
+                                                  <ul class="xingcheng_ul" style="background-color:#7ebea5">
+                                                      <li class="xingcheng_li" style="margin-top: 0px" ><span class="xingcheng_type">景点</span>  </li>
+                                                      <hr style="border: white dashed 1px;margin: 0px">
+                                                      <li class="xingcheng_li">
+                                                          <h3 style="margin-left: 27%">上海迪斯尼乐园</h3>
+                                                      </li>
+                                                      <li class="xingcheng_li">
+                                                          <h4 style="margin-left: 29%">游玩时间：10-13</h4>
+                                                      </li>
+                                                      <li class="xingcheng_li"><h4 style="margin-left: 23%">地点：浦东新区川沙新镇</h4> </li>
+                                                 </ul>
+                                              </div>
+                                          </li>
+                                   </ul>
+                               </div>
+							</div>
+		
+    
+   
+		
+		
+		
+		<script src="../js/mui.js"></script>
+
+		<script>
+			mui.init();
+			
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios ? 0.003 : 0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration: deceleration
+				});
+
+			})(mui);
+			mui('.mui-content').on('tap', '#openUrl', function() {
+				mui.openWindow({
+					url: "attentionDetail.html",
+					id: "attentionDetail",
+					waiting: {
+						autoShow: false
+					},
+					createNew: true,
+				});
+			});
+		</script>
+	</body>
+
+</html>

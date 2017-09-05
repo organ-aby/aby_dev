@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>主页</title>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+	<style>
+		.mui-search .mui-placeholder .mui-icon{
+			color: #FFFFFF;
+		}
+		.mui-search .mui-placeholder{
+			color: #FFFFFF;
+		}
+		.mui-plus.mui-android .mui-bar-nav~.mui-content{
+			padding: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<!--底部选项栏-->		
+	<nav class="mui-bar mui-bar-tab" id="menu">
+		<a class="mui-tab-item mui-active" data-href="main/story_index.html">
+			<span class="mui-icon mui-icon-paperplane"></span>
+			<span class="mui-tab-label">故事</span>
+		</a>
+		<a class="mui-tab-item" data-href="main/search_index.html">
+			<span class="mui-icon mui-icon-extra mui-icon-extra-find"></span>
+			<span class="mui-tab-label">发现</span>
+		</a>
+		<a class="mui-tab-item" data-href="main/xinyuan_index.html">
+			<span class="mui-icon mui-icon-extra mui-icon-extra-heart"></span>
+			<span class="mui-tab-label">心愿</span>
+		</a>
+
+		<a class="mui-tab-item" data-href="main/goutong_index.html">
+			<span class="mui-icon mui-icon-extra mui-icon-extra-custom"></span>
+			<span class="mui-tab-label">服务</span>
+		</a>
+		<a class="mui-tab-item" data-href="main/wode_index.html">
+			<span class="mui-icon mui-icon-person"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
+	
+	
+	
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  	mui.init({
+			swipeBack:false //启用右滑关闭功能
+	});
+		
+// 主窗口和侧滑窗口
+var main = null,
+	menu = null;
+mui.plusReady(function() {
+	plus.nativeUI.showWaiting();
+	
+	main = plus.webview.currentWebview();
+	plus.webview.close(main.opener(),"",0,"");
+	// 将子窗口的地址存在数组中，方便进行遍历，创建子窗口；
+	var subpageArr = ['main/story_index.html','main/search_index.html', 'main/xinyuan_index.html', 'main/goutong_index.html', 'main/wode_index.html'];
+	/**
+	 * 设置子窗口的样式，顶部默认44px，底部默认50px，并且设置窗口无滚动条；
+	 */
+	var subStyles = {
+		top: '0',
+		bottom: '50px',
+		scrollIndicator: 'none'
+	};
+	var aniShow = {};
+	// 生成三个子窗口，并添加至主窗口；
+	var subpage = null;
+	for (var i = 0, subLength = subpageArr.length; i < subLength; i++) {
+		var temp = {};
+		subpage = plus.webview.create(subpageArr[i],subpageArr[i], subStyles);
+		if (i != 0) {
+			subpage.hide();
+		}else{
+			temp[subpage[i]] = "true";
+			mui.extend(aniShow,temp);
+		}
+		main.append(subpage);
+	} 
+	/**
+	 * 子页面切换
+	 */
+	var tabs = document.querySelectorAll(".mui-tab-item");
+	// 设置中间变量，用于存储当前处于展示状态窗口的标识（这里用的标识是窗口的相对地址），默认是第一个窗口；
+	var activeTab = subpageArr[0];
+//	var targetTab = "";	
+	mui("#menu").on('tap', '.mui-tab-item', function() {
+		var targetTab = this.getAttribute("data-href");
+		if (targetTab === activeTab) {
+			return;
+		}
+		// 改变顶部栏的文字
+
+		//若为iOS平台或非首次显示，则直接显示
+		if(mui.os.ios||aniShow[targetTab]){
+			plus.webview.show(targetTab);
+		}else{
+			//否则，使用fade-in动画，且保存变量
+			var temp = {};
+			temp[targetTab] = "true";
+			mui.extend(aniShow,temp);
+			plus.webview.show(targetTab,"fade-in",300);
+		}
+		plus.webview.hide(activeTab);
+		activeTab = targetTab;
+	});
+	
+
+	//自定义事件，模拟点击“首页选项卡”
+	window.addEventListener("gohome",function (e){
+		var defaultTab = document.getElementById("index");
+		//模拟首页点击
+		mui.trigger(defaultTab, 'tap');
+		//切换选项卡高亮
+		var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+		if (defaultTab !== current) {
+			current.classList.remove('mui-active');
+			defaultTab.classList.add('mui-active');
+		}
+	});
+
+	setTimeout(function() {
+		plus.nativeUI.closeWaiting();		
+	}, 1000);	
+});
+
+
+
+</script>
+
+
+</body>
+</html>

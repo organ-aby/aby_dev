@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>我的</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../../../css/mui.css" rel="stylesheet" />
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div class="mui-navbar">
+				<div class="mui-navbar-inner mui-bar mui-bar-nav mui-navbar-center mui-action-back">
+					<img src="../../../images/back@2x.png" style="display: block;margin-top: 8px;" />
+				</div>
+			</div>
+			<img id="openUrl" src="../../../images/index_tiyanContent.jpg" width="100%" height="100%" />
+		</div>
+		<script src="../../../js/mui.js"></script>
+
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui('.mui-content').on('tap', '#openUrl', function() {
+				mui.openWindow({
+					url: "../../chooseDate.html",
+					id: "chooseDate",
+					waiting: {
+						autoShow: false
+					},
+					createNew: true,
+				});
+			});
+		</script>
+	</body>
+
+</html>

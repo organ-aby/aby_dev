@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>收藏</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../css/mui.css" rel="stylesheet" />	
+		<style>
+						/*html {
+				height: 100%;
+			}
+			
+			body {
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}*/
+			
+			.mui-bar{
+				overflow: hidden;
+			}
+			.mui-control-content {
+				width: 100%;
+			}
+
+			.mui-content img{
+				width: 100%;
+			}
+			.b_date{
+				position: fixed;
+				z-index: 3;
+				bottom: 0;
+			}
+			.b_date{
+				background-color: #FFFFFF;
+				width: 100%;
+				/*display: none;*/
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img {
+			    display: block;
+			    height: 100%;
+			}
+			#show-date{
+				height: 64px;
+				line-height: 64px;
+				padding-left: 30px;
+				border-top: 1px solid #EBEBEB;
+				border-bottom: 1px solid #EBEBEB;
+			}
+			#btn-confirm img{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+				<!--顶部栏-->
+		<div class="mui-navbar">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav mui-navbar-center mui-action-back">	
+				<img src="../images/back@2x.png" style="display: block;margin-top: 8px;"/>
+			</div>
+		</div>
+		<div class="mui-content" id="content" style="margin-top: 44px;margin-bottom: 153px;">
+			<div id="slider" class="mui-slider" style="height:100%;display: none;">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#untreated">
+						8月
+					</a>
+					<a class="mui-control-item" href="#processing">
+						9月
+					</a>
+					<a class="mui-control-item" href="#processed">
+						10月	
+					</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+				<div class="mui-slider-group" style="height:100%">
+					<div id="untreated" class="mui-slider-item mui-control-content">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-col-xs-12 mui-text-center" style="margin-top: -50px;">
+									<img class="" id="m8_1" date="8月24日·17:00-21:00" src="../images/m8_1.jpg"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="processing" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-col-xs-12 mui-text-center" style="margin-top: -21px;">
+									<img class="" id="m9_1" date="9月2日·13:00-17:00" src="../images/m9.jpg"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="processed" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-col-xs-12 mui-text-center" style="margin-top: -21px;">
+									<img class="" id="m10_1" date="10月14日·14:00-18:00" src="../images/m10.jpg"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img class="" id="m8_1" date="8月24日·17:00-21:00" src="../images/m8_1.jpg"/>
+			<!--<img class="" id="m9_1" date="9月2日·13:00-17:00" src="../images/m9.jpg"/>
+			<img class="" id="m10_1" date="10月14日·14:00-18:00" src="../images/m10.jpg"/>-->
+			<img class="" id="m8_1" src="../images/758795818_02.jpg" style="display: block;"/>
+			<img class="" id="m8_1" src="../images/123_03.jpg" style="display: block;"/>
+			<img class="" id="m8_1" src="../images/QQ20170810112433_02.jpg"/>
+		</div>
+		
+		<div class="b_date">
+			<div id="show-date">
+				8月24日·17:00-21:00
+			</div>
+			<div id="btn-confirm">
+				<img id="openUrl" date="10月14日·14:00-18:00" src="../images/S70802-151001_04.jpg"/>
+			</div>
+		</div>
+		
+		<script src="../js/mui.js"></script>
+		<script>
+	        mui.init({
+	            swipeBack:true //启用右滑关闭功能
+	        });
+			mui('#btn-confirm').on('tap', '#openUrl', function() {
+				mui.openWindow({
+					url: "index/index_tiyan/index_tiyanTwo.html",
+					id: "index_tiyanTwo",
+					waiting: {
+						autoShow: false
+					},
+					createNew: true,
+				});
+			});
+			mui("#content").on('tap', 'img', function() {
+				var id = this.getAttribute("id");
+				var getDate = this.getAttribute("date");
+				var className = this.getAttribute("date");
+				
+//				this.setAttribute("src","../images/"+id+".jpg");
+//				if(className!="cur"){
+//					this.setAttribute("class","cur");
+//				}
+//				else{
+//					this.setAttribute("class","");
+//					this.setAttribute("src","");
+//				}
+				
+				
+//				mui(".b_date")[0].style.display="block";
+//				mui("#show-date")[0].innerHTML=getDate;
+			});
+   	 	</script>
+	</body>
+</html>

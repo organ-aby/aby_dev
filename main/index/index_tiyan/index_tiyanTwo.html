@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>我的</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../../../css/mui.css" rel="stylesheet" />
+		<style>
+			.b_date{
+				position: fixed;
+				z-index: 3;
+				bottom: 0;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content" style="margin-bottom: 122px;">
+			<div class="mui-navbar">
+				<div class="mui-navbar-inner mui-bar mui-bar-nav mui-navbar-center mui-action-back">
+					<img src="../../../images/back@2x.png" style="display: block;margin-top: 4px;" />
+				</div>
+			</div>
+			<img src="../../../images/user_02.jpg" width="100%" height="100%" style="display: block;margin-top: 40px;"  />
+			<img src="../../../images/jieji.jpg" width="100%" height="100%" style="display: block;"  />
+			<img src="../../../images/baoxian.jpg" width="100%" height="100%" style="display: block;"  />
+		</div>
+		<div class="b_date">
+			<img id="openUrl" width="100%"  src="../../../images/user_02b.jpg" style="display: block;" />
+		</div>
+		<script src="../../../js/mui.js"></script>
+
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			mui('#openUrl')[0].addEventListener('tap',function() {
+				mui.openWindow({
+					url: "index_tiyanThree.html",
+					id: "index_tiyanThree",
+					waiting: {
+						autoShow: false
+					},
+					createNew: true,
+				});
+			});
+		</script>
+	</body>
+
+</html>

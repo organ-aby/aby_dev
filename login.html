@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>爱生活</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1">
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/newsTop.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/mobile_login.css"/>
+<link href="css/mui.css" />
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.min.js"></script>
+<script src="js/rem.min.js"></script>
+<script src="js/mui.js"></script>
+<script type="text/javascript">
+    (function (doc, win) {	
+		 var docEl = doc.documentElement,
+		 resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		 recalc = function () {
+		 //docEl.width 网页可见屏幕的宽度
+		 var clientWidth = screen.width; //整个屏幕的宽度
+		 if (!clientWidth) return;
+		 var mobileDiv=$(".sport_divMobile").width();
+	     if(mobileDiv!=clientWidth)
+	    	 docEl.style.fontSize = mobileDiv/7.5 + 'px';
+	     else
+		 	 docEl.style.fontSize = clientWidth/7.5 + 'px';
+		 };
+
+		 if (!doc.addEventListener) return;
+		 win.addEventListener(resizeEvt, recalc, false);
+		 doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+    
+	$(document).ready(function() {
+ 		var width = document.documentElement.clientWidth ;
+	    var height = document.documentElement.clientHeight ;
+	    if(height>(width*1214/750))
+	    	$(".sport_divMobile").height(height);
+	    
+		$("img[id='kaptchaImage']").on('click', function() {
+			var df = "kaptcha.jpg?" + Math.random();
+			$(this).attr("src", df);
+		});
+		
+		var height=$(".login-box").height();
+		if(""=="true"){
+			$("div[id='verificationCode']").css("display","block");
+			$(".login-box").height(height+40);
+		}
+		else{
+			$("#verification").val('');
+			$("div[id='verificationCode']").css("display","none");
+		}
+		
+		$(".mobile-input").focus(function(){
+			$(this).css("color","white");
+		});
+		
+		$(".register-btn").click(function(){
+			window.location.href="http://www.sport-covers.com/searchBackPassowrd";
+		});
+		
+		var Height=$(document).height()-50;//小屏幕的js
+	    var Width=$(document).width();
+	    var mydate = new Date();
+	    $(".foot-year").html(mydate.getFullYear());
+		$(".sport_coverBlack").css("height",Height);
+		$(".sport_mobileList").css("height",Height);
+		$(".btn_mobileList").click(function(){
+			
+			$(".sport_coverBlack").css("display","block");
+			
+			$(".btn_mobileList").css({
+				//transform: "rotate(-90deg)",
+				display:"none",
+				transition:"display 2s"
+			});
+			
+			$(".btn_mobileClose").css({
+				//transform: "rotate(-90deg)",
+				display:"block",
+				transition:"display 2s"
+			});
+			
+			var display=$(".sport_coverBlack").css("display");
+			
+			if(display!="none"){
+				$(".sport_mobileList").css({
+					right: "0",
+		            transition: "right .5s"
+		        });
+				
+			}
+		});
+		$(".sport_coverBlack").click(function(){
+			$(".sport_coverBlack").css("display","none");
+			$(".sport_mobileList").css({
+				right: "-50%",
+	            transition: "right .5s"
+	        });
+			$(".btn_mobileList").css({
+				//transform: "rotate(0deg)",
+				display:"block",
+				transition:"display 2s"
+			});
+			$(".btn_mobileClose").css({
+				//transform: "rotate(-90deg)",
+				display:"none",
+				transition:"display 2s"
+			});
+		});
+		$(".btn_mobileClose").click(function(){
+			$(".sport_coverBlack").css("display","none");
+			$(".sport_mobileList").css({
+				right: "-50%",
+	            transition: "right .5s"
+	        });
+			$(".btn_mobileList").css({
+				//transform: "rotate(0deg)",
+				display:"block",
+				transition:"display 2s"
+			});
+			$(".btn_mobileClose").css({
+				//transform: "rotate(-90deg)",
+				display:"none",
+				transition:"display 2s"
+			});
+		});
+		
+		$(".sport_mobileList").bind('click',function(){
+			$(".sport_coverBlack").css("display","none");
+			$(".sport_mobileList").css({
+				right: "-50%",
+	            transition: "right .5s"
+	        });
+			$(".btn_mobileList").css({
+				//transform: "rotate(0deg)",
+				display:"block",
+				transition:"display 2s"
+			});
+			$(".btn_mobileClose").css({
+				//transform: "rotate(-90deg)",
+				display:"none",
+				transition:"display 2s"
+			});
+		});
+		$(".sport_wx").mouseenter(function(){
+			$(".ourWX_ew").css("display","block");
+		});
+		$(".sport_wx").mouseleave(function(){
+			$(".ourWX_ew").css("display","none");
+		});
+	});
+</script>
+<style>
+	.login-bg{
+		width:100%;
+		padding:7% 0;
+	}
+	
+	.login-box{
+		width: 400px;
+		margin: 0 auto;
+		border-radius: 9px;
+		background-color: #fff;
+		height: 337px;
+	}
+	
+	.login-logo{
+		margin: 0px;
+		height:72px;
+	}
+	
+	.login-font{
+		color:#5f5f5f;
+		font-size:18px;
+		font-family:'SourceHanSansCN Regular';
+		margin:20px 0 20px 0;
+		height:inherit;
+		line-height: 72px;
+		padding-left:32px;
+	}
+	
+	.form-group{
+		padding-left:32px;
+		padding-right:27px;
+		height:40px;
+		margin-bottom: 20px;
+	}
+	
+	#username{
+		background: url('./index/pn.png') 10px center no-repeat;
+	}
+	
+	#password{
+		background: url('./index/mm.png') 10px center no-repeat;
+	}
+	
+	.login-box-body .row{
+		margin-top:37px;
+	}
+	
+	.form-group>input{
+		height:100%;
+		padding-left:38px;
+	}
+	
+	.btn-group.btn-group-justified{
+		height:40px;
+		padding-left:32px;
+		padding-right:27px;
+	}
+	
+	.btn-group{
+		height:inherit;
+	}
+	
+	.btn-group>button{
+		height:inherit;
+		background-color: #f0ad4e;
+		color:white;
+		border: 0;
+	}
+	
+	#loginBtn:hover{
+		background-color: #ff9c00;
+		color: white;
+	}
+	
+	.other-opt{
+		margin-top:27px;
+		padding: 0 112px;
+	}
+	
+	.other-opt>a{
+		display:inline-block;
+		float:left;
+		width:50%;
+		text-decoration: none;
+	}
+	
+	.register{
+		text-align: left;
+		color: #ff9c00;
+		border-right: 1px solid black;
+	}
+	
+	.register:hover{
+		color: #ff9c00;
+	}
+	
+	.forget-password{
+		text-align: right;
+		color:black;
+	}
+	
+	.forget-password:hover{
+		color:black;
+	}
+	
+	#msg{
+		text-align:center;
+	}
+	
+	
+	
+	/*小屏幕*/
+	#mobileUserName{
+		background: url('./index/mobile-user-name-icon.png') no-repeat;
+		background-size: 0.38rem;
+		padding-left: 0.52rem;
+		font-size:0.28rem;
+		color: #c5c5c5;
+	}
+	
+	#mobilePassword{
+		background: url('./index/mobile-password-icon.png') no-repeat;
+		background-size: 0.30rem;
+		padding-left: 0.52rem;
+		font-size:0.28rem;
+		color: #c5c5c5;
+	}
+	/*小屏幕*/
+	
+	@media (min-width: 768px) {
+		.sport_divComputer{ display:block}
+		.sport_divMobile{display:none;}
+		.login-bg{
+			background: url('./index/bg-img1.png') no-repeat,
+		   				url('./index/bg-img2.png') no-repeat 640px 0,
+		 				url('./index/bg-img3.png') no-repeat 1280px 0;
+		   /*  background-size: 100% 100%;  */
+	    }
+	}
+    
+	@media (max-width: 768px) {
+		.sport_divComputer{ display:none;}
+		.sport_divMobile{
+			display:block;
+			background: url('./index/mobile-bg-img.png') no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+}
+	
+</style>
+</head>
+<body class="hold-transition">
+ 
+	<!-- 小型设备 -->
+	<div class="sport_divMobile visible-xs-*">
+
+		<div class="sport_mobileBody">
+			<div class="mobile-login-box">
+				<form id="fm1" action="/login?service=http%3A%2F%2Fwww.sport-covers.com%2Fadmin%2Fredit" method="post">
+					
+					<div class="mobile-form-group has-feedback">
+						
+							
+							
+								
+								<input id="mobileUserName" name="username" class="mobile-input required" tabindex="1" placeholder="用户名/手机号" accesskey="n" type="text" value="" size="30" autocomplete="off"/>
+							
+						
+					</div>
+					<div class="mobile-form-group password-group">
+						
+						<input id="mobilePassword" name="password" class="mobile-input required" tabindex="2" placeholder="密码" accesskey="p" type="password" value="" size="30" autocomplete="off"/>
+					</div>
+					<div class="mobile-form-group" id="verificationCode" style="display:none">
+						
+						<div class="mobile-form-group">
+							<input id="verification" name="verification" class="mobile mobile-authCode mobile-input required" tabindex="3" placeholder="验证码" type="text" value="" size="9" maxlength="4" autocomplete="off"/>
+							<span class="mobile-input-group-addon" style="padding:0">
+								<img class="mobileKaptchaImage" src="kaptcha.jpg" id="kaptchaImage" />
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="hidden" name="lt" value="LT-16926-cFtJ3vjeB2Sy2aauKjoH7jBu69S7rH-cas01.example.org" />
+							<input type="hidden" name="execution" value="e2s1" />
+							<input type="hidden" name="_eventId" value="submit" />
+							<div class="mobile-btn-group">
+								<button type="button" id="btn-login" class="login-btn mobile-btn">登录</button>
+								<!--<span class="or-tab">or</span>
+								<button type="button" class="register-btn mobile-btn">注册</button>-->
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="sport_gongnengdaohang">
+				<div class="sport_mobileList">
+					<ul class="list-group" id="mobile_ulNav">
+						<a href="index.html"><li class="list-group-item"><span class="glyphicon glyphicon-home" id="home"></span>首页</li></a>
+						<a href="productionChoices.html"><li class="list-group-item"><span class="glyphicon glyphicon-shopping-cart"></span>产品精选</li></a>
+						<a href="lipei.html"><li class="list-group-item"><span class="glyphicon glyphicon-heart"></span>理赔服务</li></a>
+						<a href="login.html"><li class="list-group-item"><span class="glyphicon glyphicon-stats"></span>出单平台</li></a>
+						<a href="companyIntroduce.html"><li class="list-group-item"><span class="glyphicon glyphicon-book"></span>关于我们</li></a>
+						<a href="login.html"><li class="list-group-item"><span class="glyphicon glyphicon-user"></span>用户中心</li></a>
+						<a href="tel:0755-82725132"><li class="list-group-item"><span class="glyphicon glyphicon-phone-alt"></span>客服热线</li></a>
+					</ul>
+				</div>
+				<div class="sport_coverBlack"></div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<script src="js/mui.min.js"></script>
+	<script>
+			document.getElementById("btn-login").addEventListener('tap', function(event) {
+				mui.openWindow({
+					url: "selected.html",
+					id: "selected",
+					waiting: {
+						autoShow: false
+					}
+				});
+			});
+			
+			var first = null;
+			mui.back = function() {
+				if(!first) {
+					first = new Date().getTime();
+					plus.nativeUI.toast("再按一次退出应用");
+					setTimeout(function() {
+						first = null;
+					}, 1000);
+				} else {
+					if(new Date().getTime() - first < 1000) {
+						plus.runtime.quit();
+					}
+				}
+			};
+	</script>
+	
+</body>
+</html>

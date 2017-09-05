@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>爱生活</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+	<style>
+			html{
+				height: 100%;
+			}
+			body{
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}
+			.mui-title{
+
+			}
+			.mui-slider{
+				height: 100%;
+			}
+			.mui-navbar{
+				/*background-color: #003286;*/
+				padding: 15px;padding-bottom: 0;
+			}			
+			.mui-control-content {			
+				width: 100%;
+			}
+			.mui-slider-item .title{
+								    font-size: 17px;
+				    font-weight: 500;
+				    line-height: 44px;
+				    display: block;
+				    width: 100%;
+				    margin: 0 -10px;
+				    padding: 0;
+				    text-align: center;
+				    white-space: nowrap;
+				    color: #000;
+			}
+			.mui-slider-item a{
+				width: 50%;
+				/*display: inline-block!important;*/
+				float: left;
+				margin: 5px 0;
+				/*padding: 10px;*/
+				text-align: center;
+				
+			}
+			.mui-slider-item a.cur img{
+				border-color:#0CEA87;
+			}
+			.mui-slider-item a.cur p{
+				background-color:#0CEA87;
+				color: #FFFFFF;
+				
+			}
+			.mui-slider-item a img{
+				width: 156px!important;
+				height: 156px!important;
+				/*padding: 10px;*/				
+				border: 2px solid #C0C0C0;
+				border-radius: 6px;
+				display: inline-block;
+			}
+			.mui-slider-item a p{
+				text-align: center;
+				position: absolute;
+				bottom: 0;
+				text-align: center;
+				display: block;
+				width: 88%;
+				left: 6%;
+				margin: 0 auto;
+				height: 36px;
+				line-height: 36px;
+				background-color: #FFFFFF;
+				opacity: 0.8;
+				border-bottom-right-radius: 6px;
+				border-bottom-left-radius: 6px;
+				display: none;
+			}
+			.mui-slider-indicator{
+				z-index: 2;
+			}
+			.mui-scroll-wrapper{
+				top: 50px;
+				height: 100%;
+			}
+			.mui-slider-item{
+				height: 100%;
+			}
+			.mui-slider-group{
+				height: 100%;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item{
+				height: 84%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">请选择你喜欢的图片</h1>
+		</header>
+		-->
+		<div class="mui-content" style="height:100%">
+			<div id="slider" class="mui-slider"  style="height:100%">
+				<div class="mui-slider-group">
+					<!-- 第1张 -->
+					<div class="mui-slider-item mui-clearfix">
+						<h1 class="title">请选择喜欢的旅游方式</h1>
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<a href="#">
+									<img src="images/gentuan.jpg">
+									<p>跟团</p>
+								</a>
+								<a href="#">
+									<img src="images/jiti.jpg">
+									<p>集体</p>
+								</a>
+								<a href="#">
+									<img src="images/siren.jpg">
+									<p>情侣</p>
+								</a>
+								<a href="#">
+									<img src="images/zizu.jpg">
+									<p>个人</p>
+								</a>
+								<a href="#">
+									<img src="images/bbk.jpg">
+									<p>跟团</p>
+								</a>
+								<a href="#">
+									<img src="images/couple.jpg">
+									<p>集体</p>
+								</a>
+								<a href="#">
+									<img src="images/couple1.jpg">
+									<p>情侣</p>
+								</a>
+								<a href="#">
+									<img src="images/ger.jpg">
+									<p>个人</p>
+								</a>
+								<a href="#">
+									<img src="images/gt2.jpg">
+									<p>跟团</p>
+								</a>
+								<a href="#">
+									<img src="images/gt3.jpg">
+									<p>集体</p>
+								</a>
+								<a href="#">
+									<img src="images/siren.jpg">
+									<p>情侣</p>
+								</a>
+								<a href="#">
+									<img src="images/jt1.jpg">
+									<p>个人</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- 第2张 -->
+					<div class="mui-slider-item mui-clearfix">
+						<h1 class="title">请选择旅游的目的</h1>
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<a href="#">
+									<img src="images/dj.jpg">
+									<p>度假</p>
+								</a>
+								<a href="#">
+									<img src="images/fy.jpg">
+									<p>访友</p>
+								</a>
+								<a href="#">
+									<img src="images/gw.jpg">
+									<p>购物</p>
+								</a>
+								<a href="#">
+									<img src="images/jd.jpg">
+									<p>景点</p>
+								</a>
+								<a href="#">
+									<img src="images/meis.jpg">
+									<p>美食</p>
+								</a>
+								<a href="#">
+									<img src="images/sy.jpg">
+									<p>摄影</p>
+								</a>									
+								<a href="#">
+									<img src="images/dj2.jpg">
+									<p>度假</p>
+								</a>
+								<a href="#">
+									<img src="images/dj3.jpg">
+									<p>访友</p>
+								</a>
+								<a href="#">
+									<img src="images/fy2.jpg">
+									<p>购物</p>
+								</a>
+								<a href="#">
+									<img src="images/gw2.jpg">
+									<p>景点</p>
+								</a>
+								<a href="#">
+									<img src="images/jd2.jpg">
+									<p>美食</p>
+								</a>
+								<a href="#">
+									<img src="images/jd3.jpg">
+									<p>摄影</p>
+								</a>
+								<a href="#">
+									<img src="images/ms2.jpg">
+									<p>景点</p>
+								</a>
+								<a href="#">
+									<img src="images/ms3.jpg">
+									<p>美食</p>
+								</a>
+								<a href="#">
+									<img src="images/sy2.jpg">
+									<p>摄影</p>
+								</a>
+								<a href="#">
+									<img src="images/js4.jpg">
+									<p>摄影</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- 第3张 -->
+					<div class="mui-slider-item mui-clearfix">
+						<h1 class="title">请选择出行方式</h1>
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<a href="#">
+									<img src="images/feiji.jpg">
+									<p>飞机</p>
+								</a>
+								<a href="#">
+									<img src="images/lvc.jpg">
+									<p>火车</p>
+								</a>
+								<a href="#">
+									<img src="images/youlun.jpg">
+									<p>游轮</p>
+								</a>
+								<a href="#">
+									<img src="images/zijy.jpg">
+									<p>自驾</p>
+								</a>
+								<a href="#">
+									<img src="images/fj6.jpg">
+									<p>游轮</p>
+								</a>
+								<a href="#">
+									<img src="images/hc1.jpg">
+									<p>自驾</p>
+								</a>
+								<a href="#">
+									<img src="images/traffic1.jpg">
+									<p>自驾</p>
+								</a>
+								<a href="#">
+									<img src="images/traffic2.jpg">
+									<p>自驾</p>
+								</a>
+								<a href="#">
+									<img src="images/traffic3.jpg">
+									<p>自驾</p>
+								</a>
+								<a href="#">
+									<img src="images/traffic4.jpg">
+									<p>自驾</p>
+								</a>
+								<a href="#">
+									<img src="images/traffic5.jpg">
+									<p>自驾</p>
+								</a>
+								<a href="#">
+									<img src="images/traffic6.jpg">
+									<p>自驾</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- 第4张 -->
+					<div class="mui-slider-item">
+						<h1 class="title">请选择喜欢出游的季节</h1>
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<a href="#">
+									<img src="images/c.png">
+									<p>春</p>
+								</a>
+								<a href="#">
+									<img src="images/x.png">
+									<p>夏</p>
+								</a>
+								<a href="#">
+									<img src="images/q.png">
+									<p>秋</p>
+								</a>
+								<a href="#">
+									<img src="images/d.png">
+									<p>冬</p>
+								</a>
+								<a href="#">
+									<img src="images/gz1.jpg">
+									<p>冬</p>
+								</a>
+								<a href="#">
+									<img src="images/gz2.jpg">
+									<p>冬</p>
+								</a>
+								<a href="#">
+									<img src="images/gz3.jpg">
+									<p>冬</p>
+								</a>
+								<a href="#">
+									<img src="images/gz4.jpg">
+									<p>冬</p>
+								</a>
+								<a href="#">
+									<img src="images/gz5.jpg">
+									<p>冬</p>
+								</a>
+								<a href="#">
+									<img src="images/gz6.jpg">
+									<p>冬</p>
+								</a>
+								<a href="#">
+									<img src="images/gz7.jpg">
+									<p>冬</p>
+								</a>
+								<a href="#">
+									<img src="images/gz8.jpg">
+									<p>冬</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- 第5张 -->
+					<div class="mui-slider-item">
+						<h1 class="title">请选择住宿偏好</h1>
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<a href="#">
+									<img src="images/hh.jpg">
+									<p>豪华</p>
+								</a>
+								<a href="#">
+									<img src="images/jj.jpg">
+									<p>经济</p>
+								</a>
+								<a href="#">
+									<img src="images/jp.jpg">
+									<p>精品</p>
+								</a>
+								<a href="#">
+									<img src="images/ms.jpg">
+									<p>民宿</p>
+								</a>
+								<a href="#">
+									<img src="images/hotel1.jpg">
+									<p>民宿</p>
+								</a>
+								<a href="#">
+									<img src="images/hotel2.jpg">
+									<p>民宿</p>
+								</a>
+								<a href="#">
+									<img src="images/hotel3.jpg">
+									<p>民宿</p>
+								</a>
+								<a href="#">
+									<img src="images/hotel4.jpg">
+									<p>民宿</p>
+								</a>
+								<a href="#">
+									<img src="images/hotel5.jpg">
+									<p>民宿</p>
+								</a>
+								<a href="#">
+									<img src="images/hotel6.jpg">
+									<p>民宿</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- 第6张 -->
+					<div class="mui-slider-item">
+						<h1 class="title">请选择住宿酒店风格</h1>
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<a href="#">
+									<img src="images/gd.jpeg">
+									<p>古典</p>
+								</a>
+								<a href="#">
+									<img src="images/kj.jpg">
+									<p>科技</p>
+								</a>
+								<a href="#">
+									<img src="images/om.jpeg">
+									<p>欧美</p>
+								</a>
+								<a href="#">
+									<img src="images/xiandai.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style1.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style2.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style3.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style4.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style5.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style6.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style7.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style8.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style62.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style63.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style1201.jpg">
+									<p>现代</p>
+								</a>
+								<a href="#">
+									<img src="images/style1200.jpg">
+									<p>现代</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- 第7张 -->
+					<div class="mui-slider-item" id="last-select">
+						<h1 class="title">请选择景点类型</h1>
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<a href="#">
+									<img src="images/ds.jpg">
+									<p>都市</p>
+								</a>
+								<a href="#">
+									<img src="images/gz.jpg">
+									<p>古镇</p>
+								</a>
+								<a href="#">
+									<img src="images/hd.jpg">
+									<p>海岛</p>
+								</a>
+								<a href="#">
+									<img src="images/ls.jpg">
+									<p>历史</p>
+								</a>
+								<a href="#">
+									<img src="images/jd.jpg">
+									<p>自然</p>
+								</a>
+								<a href="#">
+									<img src="images/shamo.jpg">
+									<p>沙漠</p>
+								</a>
+								<a href="#">
+									<img src="images/jdlx1.jpg">
+									<p>自然</p>
+								</a>
+								<a href="#">
+									<img src="images/jdlx2.jpg">
+									<p>自然</p>
+								</a>
+								<a href="#">
+									<img src="images/jdlx3.jpg">
+									<p>自然</p>
+								</a>
+								<a href="#">
+									<img src="images/jdlx4.jpg">
+									<p>自然</p>
+								</a>
+								<a href="#">
+									<img src="images/jdlx5.jpg">
+									<p>自然</p>
+								</a>
+								<a href="#">
+									<img src="images/jdlx6.jpg">
+									<p>自然</p>
+								</a>
+								<a href="#">
+									<img src="images/jdlx7.jpg">
+									<p>自然</p>
+								</a>
+								<a href="#">
+									<img src="images/jdlx8.jpg">
+									<p>自然</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+				<div class="mui-slider-indicator" style="display: none;">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+				<button style="width: 90%;bottom: 0;left: 5%; padding: 6px 12px;display: none;position: fixed;" id="btn-confirm" type="button" class="mui-btn mui-btn-primary mui-btn-block">立即体验</button>
+			</div>
+		</div>
+		<script src="js/mui.js"></script>
+		<script>
+			mui.init();
+			mui.plusReady(function() {
+
+			});
+			//立即体验按钮点击事件
+			document.getElementById("btn-confirm").addEventListener('tap', function(event) {
+//				plus.storage.setItem("IsFrist", "true");
+				mui.openWindow({
+					url: "main.html",
+					id: "main",
+					waiting: {
+						autoShow: false
+					}
+				});
+			});
+			
+				(function($) {
+					//阻尼系数
+					var deceleration = mui.os.ios ? 0.003 : 0.0009;
+					$('.mui-scroll-wrapper').scroll({
+						bounce: false,
+						indicators: true, //是否显示滚动条
+						deceleration: deceleration
+					});
+
+				})(mui);
+			
+			mui('#slider').on('tap', 'a', function() {
+				var className = this.getAttribute("class");
+				if(className==null || className==""){
+					this.setAttribute("class","cur");
+				}
+				else{
+					this.setAttribute("class","");
+				}
+				
+				var scount = mui("#last-select a.cur").length;
+				if(scount > 0){
+					mui("#btn-confirm")[0].style.display= "block";
+//					mui(".mui-slider-indicator")[0].style .display = "none";
+				}else{
+					mui("#btn-confirm")[0].style.display= "none";
+//					mui(".mui-slider-indicator")[0].style .display = "block";
+				}
+			});
+			document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+				var title = this.getAttribute("data-title");
+				
+//				if (event.detail.slideNumber === 3) {
+//					mui("#btn-confirm")[0].style .display= "block";
+//					mui(".mui-slider-indicator")[0].style .display = "none";
+//				}
+//				else{
+//					mui("#btn-confirm")[0].style .display= "none";
+//					mui(".mui-slider-indicator")[0].style .display = "block";
+//				}
+			});
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>故事</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link href="../../css/mui.css" rel="stylesheet" />	
+		<style>
+			.inputContent{
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				background: #FFFFFF;
+				
+			}
+			.inputContent>div{
+				height: 40px;
+				padding-top: 5px;
+				padding-left: 5px;
+			}
+			.inputContent input{
+				width: 70%;
+				height: 30px;
+				margin-top: 5px;
+				margin: 0;
+				float: left;
+			}
+			.inputContent>div>span{
+				width: 8%;
+				height: 25px;
+				margin-top: 2px;
+				
+				float: left;
+				margin-left: 12px;
+			}
+			.emoji{
+				background: url(../../images/biaoqing.png) no-repeat;
+				background-size:100% 100% ;
+			}
+			.more{
+				background: url(../../images/jiahao.png) no-repeat;
+				background-size:100% 100% ;
+			}
+			.enter{
+				width: 10% !important;
+				font-size: 12px;
+				display: none;
+				background: #0062CC;
+				color: #FFFFFF;
+				text-align: center;
+				border-radius: 5px;
+				line-height: 25px;
+			}
+			.moreContent{
+				display: none;
+				height: 250px !important;
+				background: #E6E6E6 !important;
+			}
+			.moreContent ul{
+				list-style: none;
+				margin: 0;
+				padding: 10px;
+			}
+			.moreContent ul li{
+				float: left;
+				width: 13%;
+				margin: 0 20px;
+				font-size: 14px;
+				text-align: center;
+			}
+			.moreContent ul li img{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-navbar">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav mui-navbar-center mui-action-back">						
+				<img src="../../images/back@2x.png" style="display: block;margin-top: 8px;float: left;"/>
+				<span style="display: block;text-align: center;line-height: 50px;font-weight: 700;">旅游小助手</span>
+			</div>
+		</div>
+		<div class="mui-content">
+			<img id="chat" src="../../images/liaotian.png" width="100%" height="100%">
+		</div>
+		<div class="inputContent">
+			<div class="">
+				<input oninput="iconShow()" type="text" id="textContent" placeholder="请输入想要说的话"/>
+				<span class="emoji"></span>
+				<span class="enter">发送</span>
+				<span class="more"></span>
+			</div>
+			<div class="moreContent">
+				<ul>
+					<li><img src="../../images/xiangce.png"><span>相册</span></li>
+					<li><img src="../../images/paizhao.png"><span>拍照</span></li>
+					<li><img src="../../images/yuyin.png"><span>语音</span></li>
+				</ul>
+			</div>
+		</div>
+		<script src="../../js/mui.js"></script>
+		<script src="../../js/jquery-1.11.3.min.js"></script>
+		<script>
+	        mui.init({
+	            swipeBack:true //启用右滑关闭功能
+	        });	
+			
+			function iconShow(){
+				var x = document.getElementById("textContent").value;
+				if(x.length>=1){
+					$(".moreContent").css("display","none");
+					$(".more").css("display","none");
+					$(".enter").css("display","block");
+				}else{
+					$(".more").css("display","block");
+				    $(".enter").css("display","none");
+				}
+			}
+			$("#textContent").click(function(){
+				$(".moreContent").css("display","none");
+			})
+			
+			
+			$(".more").click(function(){
+				$(".moreContent").css("display","block");
+			})
+			$(".mui-content").click(function(){
+				$(".moreContent").css("display","none");
+			})
+			$(".enter").click(function(){
+				$("#chat").attr("src","../../images/liaotian2.png");
+				if($("#textContent").val()){
+					setTimeout(function(){
+						$("#chat").attr("src","../../images/liaotian03.png");
+					},1500)
+				}
+			})
+   	 	</script>
+	</body>
+</html>

@@ -1,0 +1,453 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		
+		<style>
+			ul{margin: 0;padding: 0;}
+			li{margin: 0;list-style: none;float: left;}
+		
+			html {
+				height: 100%;
+			}
+			
+			body {
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}
+			
+			.mui-navbar {
+				/*background-color: #003286;*/
+				padding: 15px;
+				padding-bottom: 0;
+			}
+			
+			.mui-control-content {
+				width: 100%;
+			}
+			
+
+			
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				display: block;
+				height: 100%;
+			}
+			
+			.mui-search .mui-placeholder .mui-icon {
+				font-size: 20px;
+				right: auto;
+				left: 5px;
+				display: block;
+				margin-right: 0;
+				position: absolute;
+				line-height: 34px;
+				height: 34px;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.mui-search.mui-active:before {
+				line-height: 34px;
+				height: 34px;
+				top: 0;
+				margin: 0;
+			}
+			
+			.mui-text-center>img {
+				margin-bottom: 110px;
+			}
+			
+			.tupian_xu>img{margin-bottom: 0px;height: 1000px;}
+			#recommend{background-color: white;}
+			.neirong_div{width:100%;
+			/*background-color: brown;*/
+			/*height: 90px;*/
+			margin-bottom: 13%;
+			}
+			.img_tittle{
+				width: 60%;
+				/*background-color: darkkhaki;*/
+			       margin-left: -5%;
+			}
+			.img_tittle>h4{color: #2b2b2b;}
+			.img_pinglun{
+				/*background-color: darkolivegreen;*/
+				width: 30%;
+			    float: right;
+			    padding-top: 1%;
+			    color: #696969;
+			    /*position: relative;top: -30px;*/
+			   margin-right: 2%;
+			    }
+		    .pinglun_span{
+		    	margin-right: 1%;
+		    }
+		    .tiyan{
+		    	width: 100%;
+		    	height: 121px;
+		    }
+		    .tiyan_ul_L{
+		    	float: left;
+		    	width: 35%;
+		    	 /*background-color: brown;*/
+		    }
+		    .tiyan_ul_L>img{border-radius: 5px;
+	            
+		         margin-left: 10%;
+		    }
+		    .tiyan_ul_R{
+		    	float: right;
+		    	width: 60%;
+		    	height: 100%;
+		    	/*background-color: wheat;*/
+		    	
+		    }
+		    .tiyan_ul_R>li{
+		    width: 100%;
+		    text-align: left;
+                /*background-color: #00a2ca;*/
+		       }
+            /*预定金额 span*/
+            .reserve_money{
+                font-size: 18px;
+                /*background-color: #1b6d85;*/
+                position: relative;
+                top: 12px;
+                font-weight: bold;
+                color: #00a960;
+            }
+            .picture_tittle{
+		   	width: 13%;
+		   	height: 22px;
+		   	border-radius: 5px;
+		   	background-color: white;
+		   	color: #000000;
+		   	font-weight: bold;
+		   	display: block;
+		   	position: relative;
+		    left: 2%;
+		    top: -30px;
+		   	
+	
+		   }
+		   .picture_tittle1{
+		   	width: 19%;
+		   	height: 22px;
+		   	border-radius: 5px;
+		   	background-color: white;
+		   	color: #000000;
+		   	font-weight: bold;
+		   	display: block;
+		   	position: relative;
+		    left: 2%;
+		    top: -30px;
+		   	
+	
+		   }
+		</style>
+	</head>
+
+	<body>
+			
+	<!--顶部栏-->
+	<div class="mui-navbar" style="">
+		<div class="mui-input-row mui-search">
+			<input type="search" class="mui-input-clear" placeholder="任何地方·任何时间·1位" style="margin-bottom: 0;">
+		</div>
+	</div>
+
+        
+        
+	<div class="mui-content" style="height:100%">
+
+		<div id="slider" class="mui-slider" style="height:100%">
+			<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item mui-active" href="#recommend">
+						推荐
+					</a>
+					<a class="mui-control-item" href="#story">
+						故事
+					</a>
+					<a class="mui-control-item" href="#experience">
+							体验
+					</a>
+					
+		    </div>
+			    <div class="mui-slider-group" style="height:100%">
+					
+					<!--推荐-->
+					<div id="recommend" class="mui-slider-item mui-control-content">
+						<div id="scroll" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-col-xs-12 mui-text-center tupian_xu">
+									<div class="neirong_div">
+										    <img class="openUrl" data-url="story/story_wenhua.html"src="../images/gushi_img/wenhua/chuanjutuhuo.jpg" style="border-radius: 3%;"/>
+										     <p class="picture_tittle">
+                                            	文化
+                                            </p>
+									    <ul>
+										    <li class="img_tittle"><h4>四川绝技变脸吐火</h4></li>
+										    <li class="img_pinglun">
+											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
+											    <span class="mui-icon iconfont icon-pinglun pinglun_span">128</span>
+										    </li>
+									    </ul>
+									</div>
+
+								
+							
+								
+								
+								<!--<div class="mui-table-view-cell" style="margin-bottom: 5%;"></div>-->
+                                    <div class=" tiyan ">
+                                        <ul class="tiyan_ul_L "><img src="../images/gushi_img/wenhua/huanlegu.jpg" style="height:120px;width: 120px;"/></ul>
+                                        <ul class="tiyan_ul_R ">
+                                            <li><h4>成都欢乐谷</h4></li>
+                                            <li style="width: 85%"><p>[成都金牛区]文化性、互动性为你带来全新的游玩体验！</p></li>
+                                            <li style="float: left;">
+                                                <button type="button" data-url="Wish_detail.html" class="mui-btn openUrl mui-btn-danger">去预定</button>
+                                                <span class="reserve_money">150/人</span>
+                                                <p style="float: right;margin-top: 6%;margin-right: 3%;">已服务955人</p>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <br>
+
+
+								<!--<div class="mui-table-view-cell"></div>-->
+							
+								<!--<div class="mui-table-view-cell" style="margin-bottom: 5%;"></div>-->
+
+
+
+                                <!--********************修改部分******************-->
+								<!--<div class="mui-table-view-cell"></div>-->
+                                    <div class=" tiyan ">
+                                        <ul class="tiyan_ul_L "><img src="../images/gushi_img/wenhua/laomatouhuoguo.jpg" style="height:120px;width: 120px;"/></ul>
+                                        <ul class="tiyan_ul_R ">
+                                            <li><h4>成都老码头火锅</h4></li>
+                                            <li style="width: 85%"><p>[玉林店]知名老字号，环境高大上，通宵营业</p></li>
+                                            <li style="float: left;">
+                                                <button type="button" data-url="Wish_detail.html" class="mui-btn openUrl mui-btn-danger">去预定</button>
+                                                <span class="reserve_money">150/人</span>
+                                                <p style="float: right;margin-top: 6%;margin-right: 3%;">已服务955人</p>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+
+
+
+
+								
+								    <div  style="width: 100%;height:155px;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--故事-->
+					<div id="story" class="mui-slider-item mui-control-content">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-col-xs-12 mui-text-center tupian_xu">
+									<div class="neirong_div">
+										    <img class="openUrl" data-url="story/story_wenhua.html"src="../images/gushi_img/BeiJing.jpg" style="border-radius: 3%;"/>
+										     <p class="picture_tittle">
+                                            	故事
+                                            </p>
+									    <ul>
+										    <li class="img_tittle"><h4>北京鸟巢</h4></h4></li>
+										    <li class="img_pinglun">
+											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
+											    <span class="mui-icon iconfont icon-pinglun pinglun_span">128</span>
+										    </li>
+									    </ul>
+									</div>
+									<div class="neirong_div">
+										    <img src="../images/gushi_img/DiShiNi.jpg" style="border-radius: 3%;"/>
+										    <p class="picture_tittle">
+                                            	故事
+                                            </p>
+									    <ul>
+										    <li class="img_tittle"><h4>上海迪斯尼</h4></li>
+										    <li class="img_pinglun">
+											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
+											    <span class="mui-icon iconfont icon-pinglun pinglun_span">128</span>
+										    </li>
+									    </ul>
+									</div>
+									<div class="neirong_div">
+										    <img src="../images/gushi_img/GuangZhou.jpg" style="border-radius: 3%;"/>
+										    <p class="picture_tittle">
+                                            	故事
+                                            </p>
+									    <ul>
+										    <li class="img_tittle"><h4>广州电视塔</h4></li>
+										    <li class="img_pinglun">
+											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
+											    <span class="mui-icon iconfont icon-pinglun pinglun_span">128</span>
+										    </li>
+									    </ul>
+									</div>
+									<div class="neirong_div">
+										    <img src="../images/gushi_img/HangZhou.jpg" style="border-radius: 3%;"/>
+										    <p class="picture_tittle">
+                                            	故事
+                                            </p>
+									    <ul>
+										    <li class="img_tittle"><h4>杭州</h4></li>
+										    <li class="img_pinglun">
+											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
+											    <span class="mui-icon iconfont icon-pinglun pinglun_span">128</span>
+										    </li>
+									    </ul>
+									</div>
+								    <div id="" style="width: 100%;height: 75px;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--体验-->
+					<div id="experience" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">								
+								<div class="mui-col-xs-12 mui-text-center tupian_xu">
+									<ul class="mui-table-view mui-grid-view">
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+											<a href="#">
+												<img class="mui-media-object" src="../images/gushi_img/SearchExper/HaErBin.jpg">
+												<p class="picture_tittle1">
+                                            	体验
+                                                </p>
+												<div class="mui-media-body">Snowhouse</div>
+											</a>
+										</li>
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+											<a href="#">
+												<img class="mui-media-object" src="../images/gushi_img/SearchExper/ShiBohui.jpg">
+												<p class="picture_tittle1">
+                                            	体验
+                                                </p>
+												<div class="mui-media-body">
+													Beijing Niaocao
+												</div>
+											</a>
+										</li>
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+											<a href="#">
+												<img class="mui-media-object" src="../images/gushi_img/SearchExper/SiHeyuan.jpg">
+												<p class="picture_tittle1">
+                                            	体验
+                                                </p>
+												<div class="mui-media-body">SiHeYuan</div>
+											</a>
+										</li>
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+											<a href="#">
+												<img class="mui-media-object" src="../images/gushi_img/SearchExper/Xihu.jpg">
+												<p class="picture_tittle1">
+                                            	体验
+                                                </p>
+												<div class="mui-media-body">
+													XiHuLongChuan
+												</div>
+											</a>
+										</li>
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+											<a href="#">
+												<img class="mui-media-object" src="../images/gushi_img/SearchExper/ZhiYinHao.jpg">
+												<p class="picture_tittle1">
+                                            	体验
+                                                </p>
+												<div class="mui-media-body">Wuhan ZhiYinHao</div>
+											</a>
+										</li>
+										<li class="mui-table-view-cell mui-media mui-col-xs-6">
+											<a href="#">
+												<img class="mui-media-object" src="../images/gushi_img/SearchExper/ZhongShanLin.jpg">
+												<p class="picture_tittle1">
+                                            	体验
+                                                </p>
+												<div class="mui-media-body">
+													NanJing ZhongShanLin
+												</div>
+											</a>
+										</li>
+
+									</ul>
+								    <div id="liubai" style="width: 100%;height:755px;background-color:"></div>
+								    
+								    
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+
+    <nav class="mui-bar mui-bar-tab ">
+        <a class="mui-tab-item "  onclick="window.location.href='story_index.html'">
+            <span class="mui-icon mui-icon-home"></span>
+        </a>
+        <a class="mui-tab-item mui-active" onclick="window.location.href='search_index.html'">
+            <span class="mui-icon mui-icon-search"></span>
+        </a>
+        <a class="mui-tab-item " onclick="window.location.href='xinyuan_index.html'">
+            <span class="mui-icon mui-icon-star"></span>
+        </a>
+        <a class="mui-tab-item " onclick="window.location.href='goutong_index.html'">
+            <span class="mui-icon mui-icon-phone"></span>
+        </a>
+        <a class="mui-tab-item "  onclick="window.location.href='wode_index.html'">
+            <span class="mui-icon mui-icon-person"></span>
+        </a>
+    </nav>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+				mui.init({
+					swipeBack: true //启用右滑关闭功能
+				});
+
+				
+				mui('.mui-scroll-wrapper').on('tap', '.openUrl', function() {
+					var homeUrl = this.getAttribute("data-url");
+					mui.openWindow({
+						url: homeUrl,
+						id: homeUrl,
+						waiting: {
+							autoShow: false
+						}
+					});
+				});
+		
+				(function($) {
+					//阻尼系数
+//					var deceleration = mui.os.ios ? 0.003 : 0.0009;
+					$('.mui-scroll-wrapper').scroll({
+						bounce: false,
+						indicators: true
+					});
+				})(mui);
+				
+				
+		</script>
+	</body>
+
+</html>
+
+
+
+
