@@ -49,15 +49,11 @@
 	</head>
 
 	<body>
-		<!--<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id="fanyi_tittle" href="index.html">沟通</a>
+		<header class="mui-bar mui-bar-nav">
+			<span class="mui-icon mui-icon-back mui-action-back"></span>
 			<h1 class="mui-title">电话翻译服务</h1>
-		</header>-->
-		<header id="header" class="mui-bar mui-bar-nav">
-			<h1 class="mui-title">电话翻译服务</h1>
-		<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left header_span">
-			<span class="mui-icon mui-icon-left-nav" ></span>沟通</button>
 		</header>
+
 		
 	      <div class="fanyi_div">
 	      	<ul id="fanyi_ul">
@@ -156,25 +152,7 @@
 		
 		
 		<script src="../js/mui.min.js"></script>
-		<!--<script src="../js/update.js" type="text/javascript" charset="utf-8"></script>-->
-		<script>
-			mui.init({
-				statusBarBackground: '#f7f7f7'
-			});
-
-            mui(".header_span")[0].addEventListener("tap",function(){
-                mui.openWindow({
-                    url: "goutong_index.html",
-//                    id: "rank.html",
-                    waiting: {
-                        autoShow: false
-                    }
-                });
-            });
-
-
-
-		</script>
+	
 	</body>
 
 </html>

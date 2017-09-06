@@ -126,27 +126,15 @@
                         <p class="changyongxinxi_left">意见反馈</p>
 		            </a>
 		         </li>
+		         <li class="mui-table-view-cell" data-url="safe_attention.html">
+		            <a class="mui-navigate-right">
+		              <img class="tubiao_img" src="../images/wode_img/yijianfankui_tubiao.png"/>
+                        <p class="changyongxinxi_left">旅行保障</p>
+		            </a>
+		         </li>
 			</ul>
 	    </div>
 
-  <!--      <nav class="mui-bar mui-bar-tab ">
-            <a class="mui-tab-item "  onclick="window.location.href='story_index.html'">
-                <span class="mui-icon mui-icon-home"></span>
-            </a>
-            <a class="mui-tab-item " onclick="window.location.href='search_index.html'">
-                <span class="mui-icon mui-icon-search"></span>
-            </a>
-            <a class="mui-tab-item " onclick="window.location.href='xinyuan_index.html'">
-                <span class="mui-icon mui-icon-star"></span>
-            </a>
-            <a class="mui-tab-item " onclick="window.location.href='goutong_index.html'">
-                <span class="mui-icon mui-icon-phone"></span>
-            </a>
-            <a class="mui-tab-item mui-active"  onclick="window.location.href='wode_index.html'">
-                <span class="mui-icon mui-icon-person"></span>
-            </a>
-        </nav>-->
-	
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
@@ -154,11 +142,24 @@
 			 mui("#process")[0].addEventListener("tap",function(){
                 mui.openWindow({
                     url: "process_management.html",
-//                    id: "rank.html",
+                    id: "process_management.html",
                     waiting: {
                         autoShow: false
                     }
                 });
+            });
+            
+            mui(".dibulist_div").on("tap",".mui-table-view-cell",function(){
+            	var url = this.getAttribute("data-url");
+            	if(url!=""){
+	            	mui.openWindow({
+	                    url: url,
+	                    id: url,
+	                    waiting: {
+	                        autoShow: false
+	                    }
+	                });
+            	}
             });
 		</script>
 	</body>

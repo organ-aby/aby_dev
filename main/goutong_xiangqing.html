@@ -79,10 +79,8 @@
 	</head>
 	<body>
 		<header id="header" class="mui-bar mui-bar-nav">
-			
-			<h1 class="mui-title">online</h1>
-		<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left header_span">
-			<span class="mui-icon mui-icon-left-nav"></span>沟通</button>
+			<span class="mui-icon mui-icon-back mui-action-back"></span>
+			<h1 class="mui-title">在线客服</h1>
 		</header>
 		
 		
@@ -113,49 +111,6 @@
 	        mui.init({
 	            swipeBack:true //启用右滑关闭功能
 	        });
-
-            mui(".header_span")[0].addEventListener("tap",function(){
-                mui.openWindow({
-                    url: "goutong_index.html",
-//                    id: "rank.html",
-                    waiting: {
-                        autoShow: false
-                    }
-                });
-            });
-
-
-            function iconShow(){
-				var x = document.getElementById("textContent").value;
-				if(x.length>=1){
-					$(".moreContent").css("display","none");
-					$(".more").css("display","none");
-					$(".enter").css("display","block");
-				}else{
-					$(".more").css("display","block");
-				    $(".enter").css("display","none");
-				}
-			}
-			$("#textContent").click(function(){
-				$(".moreContent").css("display","none");
-			})
-			
-			
-			$(".more").click(function(){
-				$(".moreContent").css("display","block");
-			})
-			$(".mui-content").click(function(){
-				$(".moreContent").css("display","none");
-			})
-			$(".enter").click(function(){
-//				$("#chat").attr("src","../../images/liaotian2.png");
-				$("#chat").attr("src","../images/wode_img/cheat1.png");
-				if($("#textContent").val()){
-					setTimeout(function(){
-//						$("#chat").attr("src","../images/wode_img/cheat2.png");
-					},1500)
-				}
-			})
    	 	</script>
 	</body>
 </html>
