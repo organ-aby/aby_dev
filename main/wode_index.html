@@ -100,7 +100,7 @@
 		<div class="wodedingdan_div">
 			<ul>
 				<li class="wodedingdan_li"><img class="tubiao_size" src="../images/wode_img/quanbudingdan_tubiao.png"/><p>我的订单</p></li>
-				<li class="wodedingdan_li"><img class="tubiao_size" src="../images/wode_img/daidingxingcheng_tubiao(1).png"/><p>待定行程</p></li>
+				<li class="wodedingdan_li" id="process"><img class="tubiao_size" src="../images/wode_img/daidingxingcheng_tubiao(1).png"/><p>待定行程</p></li>
 				<li class="wodedingdan_li"><img class="tubiao_size" src="../images/wode_img/daifukuan_tubiao.png"/><p>待付款</p></li>
 				<li class="wodedingdan_li"><img class="tubiao_size" src="../images/wode_img/weichuxing_tubiao.png"/><p>未出行</p></li>
 			</ul>
@@ -129,7 +129,7 @@
 			</ul>
 	    </div>
 
-        <nav class="mui-bar mui-bar-tab ">
+  <!--      <nav class="mui-bar mui-bar-tab ">
             <a class="mui-tab-item "  onclick="window.location.href='story_index.html'">
                 <span class="mui-icon mui-icon-home"></span>
             </a>
@@ -145,11 +145,21 @@
             <a class="mui-tab-item mui-active"  onclick="window.location.href='wode_index.html'">
                 <span class="mui-icon mui-icon-person"></span>
             </a>
-        </nav>
+        </nav>-->
 	
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
+			
+			 mui("#process")[0].addEventListener("tap",function(){
+                mui.openWindow({
+                    url: "process_management.html",
+//                    id: "rank.html",
+                    waiting: {
+                        autoShow: false
+                    }
+                });
+            });
 		</script>
 	</body>
 
