@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>发现</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
@@ -20,6 +20,7 @@
 				height: 100%;
 				width: 100%;
 				overflow: hidden;
+				background-color: #FFFFFF;
 			}
 			
 			.mui-navbar {
@@ -32,7 +33,10 @@
 				width: 100%;
 			}
 			
-
+			.mui-content{
+				background-color: #FFFFFF;
+				padding-bottom: 44px;
+			}
 			
 			.mui-slider .mui-slider-group .mui-slider-item img {
 				display: block;
@@ -68,22 +72,28 @@
 			.neirong_div{width:100%;
 			/*background-color: brown;*/
 			/*height: 90px;*/
-			margin-bottom: 13%;
+			margin-bottom: 4%;
+			text-align: center;
+			position: relative;
+			}
+			#story .neirong_div{
+				margin: 5% 0;
+				position: relative;
+			}
+			#story .neirong_div img{
+				margin-bottom: 3%;
 			}
 			.img_tittle{
 				width: 60%;
 				/*background-color: darkkhaki;*/
-			       margin-left: -5%;
+			   text-align: left;
 			}
 			.img_tittle>h4{color: #2b2b2b;}
 			.img_pinglun{
-				/*background-color: darkolivegreen;*/
 				width: 30%;
 			    float: right;
 			    padding-top: 1%;
 			    color: #696969;
-			    /*position: relative;top: -30px;*/
-			   margin-right: 2%;
 			    }
 		    .pinglun_span{
 		    	margin-right: 1%;
@@ -122,33 +132,37 @@
                 font-weight: bold;
                 color: #00a960;
             }
+            #recommend .picture_tittle{
+
+			    left: 6%;
+			    bottom: 14%;
+		   }
             .picture_tittle{
-		   	width: 13%;
-		   	height: 22px;
-		   	border-radius: 5px;
-		   	background-color: white;
-		   	color: #000000;
-		   	font-weight: bold;
-		   	display: block;
-		   	position: relative;
-		    left: 2%;
-		    top: -30px;
-		   	
-	
+			   	width: 13%;
+			   	height: 22px;
+			   	border-radius: 5px;
+			   	background-color: white;
+			   	color: #000000;
+			   	font-weight: bold;
+			   	display: block;
+			   	position: absolute;
+			    left: 2%;
+			    bottom: 13%;
 		   }
 		   .picture_tittle1{
-		   	width: 19%;
-		   	height: 22px;
-		   	border-radius: 5px;
-		   	background-color: white;
-		   	color: #000000;
-		   	font-weight: bold;
-		   	display: block;
-		   	position: relative;
-		    left: 2%;
-		    top: -30px;
-		   	
-	
+			   	width: 19%;
+			   	height: 22px;
+			   	border-radius: 5px;
+			   	background-color: white;
+			   	color: #000000;
+			   	font-weight: bold;
+			   	display: block;
+			   	position: absolute;
+			    left: 11%;
+			    bottom: 13%;
+		   }
+		   #experience ul li{
+		   	 margin-top: 3%;
 		   }
 		</style>
 	</head>
@@ -187,17 +201,17 @@
 							<div class="mui-scroll">
 								<div class="mui-col-xs-12 mui-text-center tupian_xu">
 									<div class="neirong_div">
-										    <img class="openUrl" data-url="story/story_wenhua.html"src="../images/gushi_img/wenhua/chuanjutuhuo.jpg" style="border-radius: 3%;"/>
+										    <img class="openUrl" data-url="story/story_wenhua.html"src="../images/gushi_img/wenhua/chuanjutuhuo.jpg" style="width: 100%; padding: 4% 4% 0 4%;"/>
 										     <p class="picture_tittle">
                                             	文化
                                             </p>
-									    <ul>
-										    <li class="img_tittle"><h4>四川绝技变脸吐火</h4></li>
-										    <li class="img_pinglun">
-											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
-											    <span class="mui-icon iconfont icon-pinglun pinglun_span">128</span>
-										    </li>
-									    </ul>
+										    <ul style="padding: 2% 4%;" class="mui-clearfix">
+											    <li class="img_tittle"><h4>四川绝技变脸吐火</h4></li>
+											    <li class="img_pinglun">
+												    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
+												    <span class="mui-icon iconfont icon-pinglun pinglun_span">128</span>
+											    </li>
+										    </ul>
 									</div>
 
 								
@@ -257,13 +271,13 @@
 					<div id="story" class="mui-slider-item mui-control-content">
 						<div id="scroll1" class="mui-scroll-wrapper">
 							<div class="mui-scroll">
-								<div class="mui-col-xs-12 mui-text-center tupian_xu">
+								<div class="mui-col-xs-12 mui-text-center tupian_xu" style="padding: 0 5%;">
 									<div class="neirong_div">
-										    <img class="openUrl" data-url="story/story_wenhua.html"src="../images/gushi_img/BeiJing.jpg" style="border-radius: 3%;"/>
+										    <img class="openUrl" data-url="story/story_wenhua.html"src="../images/gushi_img/BeiJing.jpg"/>
 										     <p class="picture_tittle">
                                             	故事
                                             </p>
-									    <ul>
+									    <ul class="mui-clearfix">
 										    <li class="img_tittle"><h4>北京鸟巢</h4></h4></li>
 										    <li class="img_pinglun">
 											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
@@ -272,11 +286,11 @@
 									    </ul>
 									</div>
 									<div class="neirong_div">
-										    <img src="../images/gushi_img/DiShiNi.jpg" style="border-radius: 3%;"/>
+										    <img src="../images/gushi_img/DiShiNi.jpg"/>
 										    <p class="picture_tittle">
                                             	故事
                                             </p>
-									    <ul>
+									    <ul class="mui-clearfix">
 										    <li class="img_tittle"><h4>上海迪斯尼</h4></li>
 										    <li class="img_pinglun">
 											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
@@ -285,11 +299,11 @@
 									    </ul>
 									</div>
 									<div class="neirong_div">
-										    <img src="../images/gushi_img/GuangZhou.jpg" style="border-radius: 3%;"/>
+										    <img src="../images/gushi_img/GuangZhou.jpg"/>
 										    <p class="picture_tittle">
                                             	故事
                                             </p>
-									    <ul>
+									    <ul class="mui-clearfix">
 										    <li class="img_tittle"><h4>广州电视塔</h4></li>
 										    <li class="img_pinglun">
 											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
@@ -298,11 +312,11 @@
 									    </ul>
 									</div>
 									<div class="neirong_div">
-										    <img src="../images/gushi_img/HangZhou.jpg" style="border-radius: 3%;"/>
+										    <img src="../images/gushi_img/HangZhou.jpg"/>
 										    <p class="picture_tittle">
                                             	故事
                                             </p>
-									    <ul>
+									    <ul class="mui-clearfix">
 										    <li class="img_tittle"><h4>杭州</h4></li>
 										    <li class="img_pinglun">
 											    <span class="mui-icon iconfont icon-zan pinglun_span">658</span>
@@ -396,7 +410,7 @@
 
 		</div>
 
-    <nav class="mui-bar mui-bar-tab ">
+   <!-- <nav class="mui-bar mui-bar-tab ">
         <a class="mui-tab-item "  onclick="window.location.href='story_index.html'">
             <span class="mui-icon mui-icon-home"></span>
         </a>
@@ -412,7 +426,7 @@
         <a class="mui-tab-item "  onclick="window.location.href='wode_index.html'">
             <span class="mui-icon mui-icon-person"></span>
         </a>
-    </nav>
+    </nav>-->
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
