@@ -299,14 +299,19 @@
 					"fonts/mui.ttf",
 					"main/index.html",
 					"css/icons-extra.css",
-					"css/mui.css"
+					"css/mui.css",
+					"main/story_index.html"
 				],
 				"refer": [
 					"main/attention.html",
 					"main/email.html",
 					"main/story.html",
 					"main/user.html",
-					"main/chat/chat.html"
+					"main/chat/chat.html",
+					"main/search_index.html",
+					"main/xinyuan_index.html",
+					"main/wode_index.html",
+					"main/goutong_index.html"
 				],
 				"priority": 0
 			},
@@ -616,7 +621,12 @@
 				"resources": [
 					"images/stroy_wenhua.jpg",
 					"js/mui.js",
-					"css/mui.css"
+					"css/mui.css",
+					"images/gushi_img/wenhua/chuanjutuhuo1.jpg",
+					"images/gushi_img/wenhua/jiaotong.jpg",
+					"images/gushi_img/wenhua/chaguan.jpg",
+					"images/gushi_img/wenhua/shunxinlaochaguan.jpg",
+					"images/gushi_img/wenhua/touxiang1.jpg"
 				],
 				"refer": [],
 				"priority": 0
@@ -736,6 +746,219 @@
 					"images/jiahao.png",
 					"images/liaotian2.png",
 					"images/liaotian03.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/search_index.html": {
+				"resources": [
+					"images/gushi_img/SearchExper/SiHeyuan.jpg",
+					"images/gushi_img/GuangZhou.jpg",
+					"images/gushi_img/wenhua/laomatouhuoguo.jpg",
+					"images/gushi_img/BeiJing.jpg",
+					"images/gushi_img/SearchExper/ShiBohui.jpg",
+					"images/gushi_img/SearchExper/HaErBin.jpg",
+					"images/gushi_img/SearchExper/ZhongShanLin.jpg",
+					"images/gushi_img/SearchExper/ZhiYinHao.jpg",
+					"js/mui.min.js",
+					"images/gushi_img/HangZhou.jpg",
+					"images/gushi_img/DiShiNi.jpg",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"images/news_long_img.jpg",
+					"images/gushi_img/wenhua/huanlegu.jpg",
+					"images/gushi_img/SearchExper/Xihu.jpg"
+				],
+				"refer": [
+					"main/story/story_wenhua.html",
+					"main/Wish_detail.html"
+				],
+				"priority": 0
+			},
+			"main/story_index.html": {
+				"resources": [
+					"images/gushi_img/wenhua/ZhuangJin.jpg",
+					"images/gushi_img/yundong/HuaXue.jpg",
+					"images/gushi_img/yundong/ChongLang.jpg",
+					"images/gushi_img/yule/HanWu.jpg",
+					"images/gushi_img/HuWai/LuYing.jpg",
+					"images/gushi_img/yinshi/dongporou.jpg",
+					"images/gushi_img/yinshi/quanjudekaoya1.jpg",
+					"images/gushi_img/yundong/Football1.jpg",
+					"images/gushi_img/wenhua/chuanjutuhuo.jpg",
+					"images/gushi_img/qinzi/zouxiu.jpg",
+					"images/gushi_img/wenhua/puppet1.jpg",
+					"images/gushi_img/wenhua/jingju.jpg",
+					"css/iconfont.css",
+					"images/gushi_img/yule/SiRenYingYuan.jpg",
+					"js/mui.js",
+					"images/gushi_img/yule/DiaoYu.jpg",
+					"images/gushi_img/HuWai/Shaokao1.jpg",
+					"images/gushi_img/yinshi/XinJiang.jpg",
+					"images/gushi_img/HuWai/Muyang.jpg",
+					"images/gushi_img/yinshi/fotiaoqiang.jpg",
+					"images/gushi_img/yinshi/liangzihudazhaxie.jpg",
+					"images/gushi_img/qinzi/saipao.jpg",
+					"images/gushi_img/qinzi/taoyi.jpg",
+					"images/gushi_img/yule/ChangGe.jpg",
+					"images/gushi_img/wenhua/wenhua1.jpg",
+					"images/gushi_img/qinzi/qinzidiy.jpg",
+					"images/gushi_img/HuWai/Gouhuo.jpg",
+					"css/mui.css",
+					"images/gushi_img/yinshi/riliao.jpg",
+					"images/gushi_img/yundong/tiaosan.jpg",
+					"images/gushi_img/yule/taiqiu.jpg",
+					"images/gushi_img/HuWai/fangfengzheng.jpg",
+					"images/gushi_img/yundong/Runing.jpg",
+					"images/gushi_img/wenhua/wushi.jpg",
+					"images/gushi_img/qinzi/zhaicaomei.jpg",
+					"images/gushi_img/yule/minzwuu.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/xinyuan_index.html": {
+				"resources": [
+					"images/gushi_img/wenhua/jinli.jpg",
+					"images/gushi_img/wenhua/wuhouci.jpg",
+					"main/wish_index.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/wode_index.html": {
+				"resources": [
+					"images/wode_img/changyongxinxi_tubiao.png",
+					"images/wode_img/woyaohezuo_tubiao.png",
+					"images/wode_img/beijintupian.jpg",
+					"fonts/mui.ttf",
+					"images/wode_img/yijianfankui_tubiao.png",
+					"images/wode_img/weichuxing_tubiao.png",
+					"images/wode_img/touxiang.JPG",
+					"images/wode_img/wodeqianbao_tubiao.png",
+					"images/wode_img/quanbudingdan_tubiao.png",
+					"images/wode_img/daidingxingcheng_tubiao(1).png",
+					"images/wode_img/daifukuan_tubiao.png",
+					"images/wode_img/protection.png",
+					"images/wode_img/xitongtubiao.png"
+				],
+				"refer": [
+					"main/safe_attention.html"
+				],
+				"priority": 0
+			},
+			"main/goutong_index.html": {
+				"resources": [
+					"images/wode_img/jiangyiyan.jpg",
+					"images/wode_img/gloria.jpg",
+					"images/wode_img/jiangyiyan1.jpg",
+					"images/wode_img/Taylor.jpg",
+					"images/wode_img/Scarlett.jpg",
+					"images/wode_img/yagmi.jpg",
+					"images/wode_img/Dennings.jpg",
+					"images/wode_img/Hathaway.jpg"
+				],
+				"refer": [
+					"main/goutong_xiangqing.html",
+					"main/goutong_translate.html"
+				],
+				"priority": 0
+			},
+			"main/Wish_detail.html": {
+				"resources": [
+					"images/gushi_img/wenhua/chaguan.jpg",
+					"images/gushi_img/wenhua/jiaotong.jpg",
+					"fonts/mui.ttf",
+					"images/WishDetail/TiYan2-2.jpeg",
+					"images/gushi_img/wenhua/jinli.jpg",
+					"images/WishDetail/TiYan2-1.jpeg",
+					"js/mui.min.js",
+					"images/WishDetail/TouXiangWish.jpg",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"images/WishDetail/TiYan2-3.jpeg",
+					"images/gushi_img/wenhua/shunxinlaochaguan.jpg",
+					"images/WishDetail/DiTu.PNG"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/wish_index.html": {
+				"resources": [
+					"images/gushi_img/wenhua/jinli.jpg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"images/gushi_img/wenhua/wuhouci.jpg",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"images/gushi_img/wenhua/laomatouhuoguo.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/goutong_xiangqing.html": {
+				"resources": [
+					"js/jquery-1.11.3.min.js",
+					"images/paizhao.png",
+					"images/yuyin.png",
+					"images/biaoqing.png",
+					"images/jiahao.png",
+					"js/mui.js",
+					"images/wode_img/cheat1.jpg",
+					"css/mui.css",
+					"images/xiangce.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/goutong_translate.html": {
+				"resources": [
+					"js/mui.picker.js",
+					"images/2x_mobile.png",
+					"fonts/mui.ttf",
+					"css/mui.picker.css",
+					"images/wode_img/relaxation.jpg",
+					"images/wode_img/shopping1.jpg",
+					"js/city.data-3.js",
+					"images/wode_img/hotel.jpg",
+					"js/mui.min.js",
+					"js/mui.poppicker.js",
+					"images/wode_img/dining room1.jpg",
+					"css/mui.min.css",
+					"images/wode_img/jinji_phone.png",
+					"images/b_arrows.png",
+					"js/city.data.js",
+					"css/mui.poppicker.css",
+					"images/wode_img/scenicspot1.jpg",
+					"images/wode_img/takeataxi.jpg"
+				],
+				"refer": [
+					"main/call.html"
+				],
+				"priority": 0
+			},
+			"main/call.html": {
+				"resources": [
+					"images/20170907102203_02.jpg",
+					"js/mui.js",
+					"css/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/safe_attention.html": {
+				"resources": [
+					"images/wode_img/borrow.png",
+					"images/wode_img/insurance.png",
+					"images/wode_img/pingdanchuyou.png",
+					"js/mui.min.js",
+					"images/wode_img/jiesongfeiji.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/wode_img/naquhua.png",
+					"images/wode_img/purchase.png"
 				],
 				"refer": [],
 				"priority": 0
