@@ -8,6 +8,8 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="../css/mui.min.css">
+		<link href="../css/mui.picker.css" rel="stylesheet" />
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
 		<style type="text/css">
 			#list {
 				/*避免导航边框和列表背景边框重叠，看起来像两条边框似得；*/
@@ -45,6 +47,57 @@
 			}
             /*服务字体颜色*/
 			.fuwu_yingji>li{color: #696969;}
+			
+			.jfk-button-img {
+			    background-repeat: no-repeat;
+			    display: inline-block;
+			    height: 24px!important;
+			    width: 24px!important;
+			    background-image: url(../images/1x_mobile.png);
+			    /*适配高分屏*/
+			    background-image: -webkit-image-set(url(../images/1x_mobile.png) 1x,url(../images/2x_mobile.png) 2x);
+			}
+			.arrow.jfk-button-img {
+			    background-position: 0 -168px;
+			}
+			.arrow {
+			    display: inline-block;
+			    position: absolute;
+			    right: 4px;
+			    top: 6px;
+			    width: 0px;
+			}
+			.ls-wrap{
+				border-top:1px solid #CCCCCC ;
+				border-bottom:1px solid #CCCCCC ;
+				background-color: #FFFFFF;
+				height: 40px;
+				line-height: 40px;
+			}
+			.sl-selector{width: 40%;float: left;text-align: center;    position: relative;}
+			.swap-wrap{
+				width: 20%;
+				float: left;
+				text-align: center;
+				border-left:1px solid #CCCCCC;
+				border-right:1px solid #CCCCCC ;
+				
+			}
+			.swap-wrap img{
+				margin-top: 2px;
+			}
+			.sl-selector a{color: #000000;}
+			
+			.ui-alert {
+				text-align: center;
+				padding: 20px 10px;
+				font-size: 16px;
+			}
+						.mui-btn {
+				font-size: 16px;
+				padding: 8px;
+				margin: 3px;
+			}
 		</style>
 	</head>
 
@@ -52,43 +105,29 @@
 		<header class="mui-bar mui-bar-nav">
 			<span class="mui-action-back mui-icon mui-icon-back "></span>
 			<h1 class="mui-title">电话翻译服务</h1>
+			<a id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">充值</a>
 		</header>
 
+		<div class="mui-content" style="padding-top:64px;">
+			<input id='showCityPicker3' type="text" placeholder="请选择所在地" />
+		</div>
 		
-	      <div class="fanyi_div">
-	      	<ul id="fanyi_ul">
-	      		<li style="width: 30%;"> 
-	      			<select class="mui-btn mui-btn-block fanyi_sel" style="width: 100%;padding-left: 20%;">
-					    <option value="item-1">Beijing</option>
-					    <option value="item-2">London</option>
-					    <option value="item-3">Tokyo</option>
-					    <option value="item-4">Moscow</option>
-					    <option value="item-5">Seoul</option>
-				    </select>
-	      		</li>
-	      		<li style="width: 50%;"> 
-	      			<select class="mui-btn mui-btn-block fanyi_sel"style="width: 40%;">
-					    <option value="item-1">Chinese</option>
-					    <option value="item-2">Arab</option>
-				    	<option value="item-3">Denmark</option>
-				    	<option value="item-4">Korean</option>
-					    <option value="item-5">Japanese</option>
-				    </select>
-				    <span class="mui-icon mui-icon-arrowthinright" style="margin-left: 3%;"></span>
-				    <select class="mui-btn mui-btn-block fanyi_sel"style="width: 40%;float: right;">
-					    <option value="item-1">English</option>
-					    <option value="item-2">Arab</option>
-				    	<option value="item-3">Denmark</option>
-				    	<option value="item-4">Korean</option>
-					    <option value="item-5">Japanese</option>
-				    </select>
-	      		</li>
-	      	</ul>
-	      </div>
-		       
-		<div class="mui-slider dianhua_content"style="">
+		<div class="ls-wrap mui-clearfix">
+			<div class="sl-selector lang_list">
+				<a>自动检测</a>
+				<div class="arrow jfk-button-img"></div>
+			</div>
+			<div class="swap-wrap"><img src="../images/b_arrows.png" style="width: 26%;"></div>
+			<div class="sl-selector lang_list">
+				<a>中文</a>
+				<div class="arrow jfk-button-img"></div>
+			</div>
+		</div>
+		
+		
+		<div class="mui-slider dianhua_content" style="">
             <div class="mui-slider-group mui-slider-loop">
-        <!--支持循环，需要重复图片节点-->
+        		<!--支持循环，需要重复图片节点-->
                  <div class="mui-slider-item mui-slider-item-duplicate">
                      <ul class="fuwu_yingji">
                          <li><img src="../images/wode_img/relaxation.jpg" /></li>
@@ -147,12 +186,40 @@
         </div>
 
 		<div class="dianhua_bottom">
-			<a href="#" ><img id="jinji_phone" src="../images/wode_img/jinji_phone.png"/></a>
+			<a id="call"><img id="jinji_phone" src="../images/wode_img/jinji_phone.png"/></a>
 		</div>
 		
 		
 		<script src="../js/mui.min.js"></script>
-	
+		<script src="../js/mui.picker.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			//级联示例
+			var cityPicker3 = new mui.PopPicker({
+				layer: 3
+			});
+			cityPicker3.setData(cityData3);
+			var showCityPickerButton = document.getElementById('showCityPicker3');
+			showCityPickerButton.addEventListener('tap', function(event) {
+				cityPicker3.show(function(items) {
+					showCityPickerButton.value = (items[0] || {}).text + "--" + (items[1] || {}).text + "--" + (items[2] || {}).text;
+					//返回 false 可以阻止选择框的关闭
+					//return false;
+				});
+			}, false);
+			
+			mui("#call")[0].addEventListener("tap",function(){
+                mui.openWindow({
+                    url: "call.html",
+                    id: "call.html",
+                    waiting: {
+                        autoShow: false
+                    }
+                });
+            });
+		</script>
 	</body>
 
 </html>
