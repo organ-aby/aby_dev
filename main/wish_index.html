@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -18,32 +17,39 @@
 			img{width: 100%;}
 				/*相关故事*/
 			.xiangguan_li{float: left;
-				padding: 2% 3%;
+			padding: 2% 3%;
 			}
-			.xiangguan_img{border-radius: 5px;}
-			.xiangguan_li_left{float: left;width: 30%;}
-			.xiangguan_li_right{float: left;
-			margin-left: 1%;
-			width: 60%;
+			.xiangguan_img{border-radius: 5px;
+
+            }
+			.xiangguan_li_left{float: left;width: 32%;
+                /*background-color: #1b6d85;*/
+            }
+			.xiangguan_li_right{float: right;
+			margin-left: ;
+			width: 62%;
 			/*background-color: #5BC0DE;*/
 			}
-			#xiangguan_li_right>li{width: 100%;}
+			#xiangguan_li_right>li{width: 100%;
+			
+			}
 			
 			
 			.xing_color{color: #e6b422;}
 			
-			.gushi{
-				width: 100%;
-				height: 500px;
+			.gushi{width: 100%;
+			height: 500px
+			/*background-color: sandybrown;*/
 			}
 			
 			
 			.jinli{margin-bottom: 5%;}
 		    /*end*/
-		    .tiyan{
+		     .tiyan{
 		    	width: 100%;
-		    	height: 125px;margin-top: 5%;
+		    	height: 110px;
 		    	/*background-color: salmon;*/
+                 margin-top: 4%;
 		    }
 		    .tiyan_ul_L{
 		    	float: left;
@@ -52,13 +58,13 @@
 		    }
 		    .tiyan_ul_L>img{border-radius: 5px;
 	            
-		         margin-left: 10%;
+		         margin-left: 2%;
 		    }
 		    .tiyan_ul_R{
 		    	float: left;
-		    	width: 55%;
+		    	padding-left:2% ;
+		    	width: 65%;
 		    	height: 100%;
-                padding-left: 2%;
 		    	/*background-color: wheat;*/
 		    	
 		    }
@@ -79,6 +85,7 @@
 		    	left:36px;
 		    	top: 39px;
 		    }
+
              .reserve_money{
                  font-size: 18px;
                  /*background-color: #1b6d85;*/
@@ -87,6 +94,27 @@
                  font-weight: bold;
                  color: #00a960;
              }
+             .fuxuankuang {
+			    width: 9%;
+			    height: 100px;
+			    float: left;
+			    /* background-color: #66AFE9; */
+			}
+			
+			/***********/
+			#checkbox1{
+				width: 20%;
+				height: 115px;
+				margin: 0px;
+				padding-top: 2.5rem;
+				padding-left: 2%;
+				background-color: #e7e7eb;
+				position: absolute;
+				right: -1rem;
+				top: -1.4rem;
+				
+			}
+			/************/
 		</style>
 	</head>
 
@@ -95,143 +123,109 @@
 		<header id="header" class="mui-bar mui-bar-nav">
 			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
 			<h1 class="mui-title">心愿单</h1>
-			<button id="all" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right" onclick="window.location.href='xinyuan_index.html'">取消</button>
+			<button id="all"  class="mui-btn mui-btn-blue mui-btn-link mui-pull-right" onclick="window.location.href='xinyuan_index.html'">选择</button>
 		</header>
+		
+		 <div class="gushi" style="margin-top:64px;background-color: ; width: 100%;height: 120px;">
+			            <ul>
+				            <li class="xiangguan_li mui-table-view-cell mui-transitioning">
+				    	        <ul class="xiangguan_li_left"><img class="xiangguan_img" src="../images/gushi_img/wenhua/jinli.jpg"/></ul>
+						        <ul class="xiangguan_li_right">
+							    <li class="jinli">
+							        <h4>成都锦里</h4>
+							        <!--<p style="width: 79%;">都市里离浪漫最近的地方——锦里,体验时尚休闲魅力街区。</p>-->
+							        <div class="mui-checkbox" style="width: 100%;" style="position: relative;">
+                                        <p style="width:80%;background-color: ;float: left;">都市里离浪漫最近的地方——锦里,体验时尚休闲魅力街区。</p>
+                                        <input id="checkbox1" name="checkbox1" value="Item 1" type="checkbox"  style="">
+                                    </div>
+							    </li>
+						        <li class="pinglun_chengdu" style="text-align: right;padding-right: 7%;"> 
+							            <span class="mui-icon iconfont icon-zan ">658</span>
+						                <span class="mui-icon iconfont icon-pinglun ">128</span>
+						        </li>
+						        </ul>
+						     </li>
+				        </ul>
+            	    </div>
+           	
+		
+	    		
+         
+         <div class="tiyan">
+			<ul>
+                <li class="xiangguan_li mui-table-view-cell mui-transitioning">
+                    <!---->
+                 
+                    <ul class="tiyan_ul_L "><img src="../images/gushi_img/wenhua/wuhouci.jpg" style="height:120px;width: 120px;"/></ul>
+                    <ul class="tiyan_ul_R ">
+                        <li><h4>武侯祠    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="mui-icon iconfont icon-xing xing_color"></span>
+                            <span class="mui-icon iconfont icon-xing xing_color"></span>
+                            <span class="mui-icon iconfont icon-xing xing_color"></span>
+                            <span class="mui-icon iconfont icon-banxing xing_color"></span>
+                        </h4>
+                        </li>
+                        <li style="width: 100%">
+                        	<div class="mui-checkbox" style="width: 100%;">
+                                <p style="width: 80%;background-color: ;float: left;">[玉林店]知名老字号，环境高大上，通宵营业</p>
+                                <input id="checkbox1" name="checkbox1" value="Item 1" type="checkbox"  style="">
+                            </div>
+                        </li>
+                        <li style="float: left;margin-top: 6%">
+                            <button type="button" onclick="window.location.href='Wish_detail.html'" class="mui-btn openUrl mui-btn-danger">去预定</button>
+                            <span class="reserve_money">50/人</span>
+                            <!--<p style="float: right;margin-top: 6%;margin-right: 3%;">已服务5425人</p>-->
+                        </li>
 
-         <div class="tiyan" style="margin-top:15%;width: 100%;height: 120px;">
-	         <ul class="tiyan_ul_L "><img src="../images/gushi_img/wenhua/jinli.jpg" style="height:120px;width: 120px;"/></ul>
-	         <ul class="tiyan_ul_R ">
-	             <li><h4>成都锦里</h4>
-	             </li>
-	             <li style="width: 85%"><p>都市里离浪漫最近的地方——锦里,体验时尚休闲魅力街区。</p></li>
-					<li class="pinglun_chengdu" style="padding-right: 7%;">
-						<span class="mui-icon iconfont icon-zan ">658</span>
-				        <span class="mui-icon iconfont icon-pinglun ">128</span>
-					</li>
-	
-	         </ul>
-				<ul class="fuxuankuang">
-					<li>
-					<div class=" mui-checkbox fuxuankuang_div">
-	                    <input name="check" value="Item 1" type="checkbox">
-	                </div>
-					</li>
+                    </ul>
+                </li>
+
+                <!--老码头火锅-->
+                <li class="xiangguan_li mui-table-view-cell mui-transitioning">
+                    <ul class="tiyan_ul_L "><img src="../images/gushi_img/wenhua/laomatouhuoguo.jpg" style="height:120px;width: 120px;"/></ul>
+                    <ul class="tiyan_ul_R ">
+                        <li><h4>老码头火锅 &nbsp;
+                            <span class="mui-icon iconfont icon-xing xing_color"></span>
+                            <span class="mui-icon iconfont icon-xing xing_color"></span>
+                            <span class="mui-icon iconfont icon-xing xing_color"></span>
+                            <span class="mui-icon iconfont icon-xing xing_color"></span>
+                        </h4></li>
+                        <li style="width: 100%">
+                        	<div class="mui-checkbox" style="width: 100%;">
+                                <p style="width: 80%;background-color: ;float: left;">[玉林店]知名老字号，环境高大上，通宵营业</p>
+                                <input id="checkbox1" name="checkbox1" value="Item 1" type="checkbox"  style="">
+                            </div>
+                        </li>
+                        <li style="float: left;margin-top: 6%">
+                            <button type="button" onclick="window.location.href='Wish_detail.html'" class="mui-btn openUrl mui-btn-danger">去预定</button>
+                            <span class="reserve_money">150/人</span>
+                            <!--<p style="float: right;margin-top: 6%;margin-right: 3%;">已服务955人</p>-->
+                        </li>
+
+                    </ul>
+                </li>
+
+
+
+
+
+
+
 				</ul>
-			</div>
-
-        <div class=" tiyan " >
-            <ul class="tiyan_ul_L "><img src="../images/gushi_img/wenhua/wuhouci.jpg" style="height:120px;width: 120px;"/></ul>
-            <ul class="tiyan_ul_R ">
-                <li><h4>武侯祠</h4>
-                </li>
-                <li style="width: 85%"><p>[玉林店]知名老字号，环境高大上，通宵营业</p></li>
-                <li style="float: left;margin-top: 6%">
-                    <button type="button" onclick="window.location.href='Wish_detail.html'" class="mui-btn openUrl mui-btn-danger">去预定</button>
-                    <span class="reserve_money">50/人</span>
-                    <!--<p style="float: right;margin-top: 2%;margin-right: 0%;">已服务5425人</p>-->
-                </li>
-
-            </ul>
-            <ul class="fuxuankuang">
-                <li>
-                    <div class=" mui-checkbox fuxuankuang_div">
-                        <input name="check" value="Item 1" type="checkbox">
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-
-        <div class=" tiyan " >
-            <ul class="tiyan_ul_L "><img src="../images/gushi_img/wenhua/laomatouhuoguo.jpg" style="height:120px;width: 120px;"/></ul>
-            <ul class="tiyan_ul_R ">
-                <li><h4> <h4>老码头火锅    &nbsp;
-                    <span class="mui-icon iconfont icon-xing xing_color"></span>
-                    <span class="mui-icon iconfont icon-xing xing_color"></span>
-                    <span class="mui-icon iconfont icon-xing xing_color"></span>
-                    <span class="mui-icon iconfont icon-xing xing_color"></span>
-                </h4>
-                </h4>
-                </li>
-                <li style="width: 85%"><p>[玉林店]知名老字号，环境高大上，通宵营业</p></li>
-                <li style="float: left;margin-top: 6%">
-                    <button type="button" onclick="window.location.href='Wish_detail.html'" class="mui-btn openUrl mui-btn-danger">去预定</button>
-                    <span class="reserve_money">150/人</span>
-                    <!--<p style="float: right;margin-top: 2%;margin-right: 0%;">已服务5425人</p>-->
-                </li>
-
-            </ul>
-            <ul class="fuxuankuang">
-                <li>
-                    <div class=" mui-checkbox fuxuankuang_div">
-                        <input name="check" value="Item 1" type="checkbox">
-                    </div>
-                </li>
-            </ul>
-        </div>
+           	</div>
 
 
 
-
-
-        <!--
-          <div class=" tiyan " >
-                     <ul class="tiyan_ul_L "><img src="../images/gushi_img/wenhua/laomatouhuoguo.jpg" style="height:100px;width: 100px;"/></ul>
-                     <ul class="tiyan_ul_R ">
-                        <li style="float: left;background-color: ;">
-                            <h4>老码头火锅    &nbsp;
-                                <span class="mui-icon iconfont icon-xing xing_color"></span>
-                                <span class="mui-icon iconfont icon-xing xing_color"></span>
-                                <span class="mui-icon iconfont icon-xing xing_color"></span>
-                                <span class="mui-icon iconfont icon-xing xing_color"></span>
-                            </h4>
-
-                        </li>
-                        <li style="padding-left: 20px;"><h3 style="color:#e60033;">70-100/ren</h5></li>
-                        <li style="float: left;"><button type="button" onclick="window.location.href='Wish_detail.html'" class="mui-btn mui-btn-success">去预定</button><p style="float: right;margin-top: 6%;margin-right: 3%;">已服务2157人</p></li>
-                    </ul>
-                    <ul class="fuxuankuang">
-                        <li>
-                                <div class=" mui-checkbox  fuxuankuang_div">
-
-                                   <input name="check" value="Item 1" type="checkbox">
-                                  </div>
-                        </li>
-                    </ul>
-        </div>-->
-			
-			
-			<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" href="#tabbar">
-		     	<button id='confirmBtn' type="button" class="mui-btn mui-btn-danger " style="width: 80%; margin-top: -10px;">
-					加入行程
-				</button>
-			</a>
-		</nav>
-		
-		
-	      
-	    <!--  <div class="mui-popup mui-popup-in" style="display: block;">
-	      	<div class="mui-popup-inner">
-	      		<div class="mui-popup-title">Hello MUI</div>
-	      		<div class="mui-popup-text">MUI是个好框架</div>
-	      	</div>
-	      	<div class="mui-popup-buttons">
-	      		<span class="mui-popup-button">是</span>
-	      		<span class="mui-popup-button mui-popup-button-bold">否</span>
-	      	</div>
-	      </div>-->
-	      <!--<button  type="button" class="mui-btn mui-btn-blue mui-btn-outlined">确认消息框</button>-->
-         <!--<div id="info"></div>-->
-		
-		
-		
-		  
-		
-		
+                <nav class="mui-bar mui-bar-tab">
+			        <a class="mui-tab-item mui-active" href="#tabbar">
+		            	<button id='confirmBtn' type="button" class="mui-btn mui-btn-danger " style="width: 80%; margin-top: -10px;">
+					        加入行程
+			        	</button>
+			        </a>
+	        	</nav>
 		
 		<script src="../js/mui.min.js"></script>
-		<script type="text/javascript">
+        <script type="text/javascript">
 			mui.init()
 		
 		
@@ -246,6 +240,9 @@
                }*/
               })
          });
+         
+      
+
 		</script>
 	</body>
 
