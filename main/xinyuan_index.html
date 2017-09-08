@@ -61,7 +61,7 @@
 		    }
 		    .tiyan_ul_L>img{border-radius: 5px;
 	            
-		         margin-left: 2%;
+		         /*margin-left: 2%;*/
 		    }
 		    .tiyan_ul_R{
 		    	float: left;
@@ -112,7 +112,7 @@
 		<header id="header" class="mui-bar mui-bar-nav">
 			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
 			<h1 class="mui-title">心愿单</h1>
-			<button id="all"  class="mui-btn mui-btn-blue mui-btn-link mui-pull-right" onclick="window.location.href='wish_index.html'">选择</button>
+			<button id="all"  class="mui-btn mui-btn-blue mui-btn-link mui-pull-right" >选择</button>
 		</header>
 		
 		<div class="gushi" style="margin-top:64px;background-color: ; width: 100%;height: 120px;">
@@ -164,7 +164,7 @@
                         </li>
                         <li style="width: 85%"><p>[玉林店]知名老字号，环境高大上，通宵营业</p></li>
                         <li style="float: left;margin-top: 6%">
-                            <button type="button" onclick="window.location.href='Wish_detail.html'" class="mui-btn openUrl mui-btn-danger">去预定</button>
+                            <button id="button1" type="button"  class="mui-btn  mui-btn-danger">去预定</button>
                             <span class="reserve_money">50/人</span>
                             <p style="float: right;margin-top: 6%;margin-right: 3%;">已服务5425人</p>
                         </li>
@@ -191,7 +191,7 @@
                         </h4></li>
                         <li style="width: 85%"><p>[玉林店]知名老字号，环境高大上，通宵营业</p></li>
                         <li style="float: left;margin-top: 6%">
-                            <button type="button" onclick="window.location.href='Wish_detail.html'" class="mui-btn openUrl mui-btn-danger">去预定</button>
+                            <button  id="button2" type="button" class="mui-btn mui-btn-danger">去预定</button>
                             <span class="reserve_money">150/人</span>
                             <p style="float: right;margin-top: 6%;margin-right: 3%;">已服务955人</p>
                         </li>
@@ -213,7 +213,34 @@
 		<script type="text/javascript">
 			 mui.init()
 			
-			
+			mui("#all")[0].addEventListener("tap",function(){
+				mui.openWindow({
+					url: "wish_index.html",
+					id: "wish_index.html",
+					waiting: {
+						autoShow: false
+					}
+				});	
+			});
+			mui("#button1")[0].addEventListener("tap",function(){
+				mui.openWindow({
+					url: "Wish_detail.html",
+					id: "Wish_detail.html",
+					waiting: {
+						autoShow: false
+					}
+				});	
+			});
+				mui("#button2")[0].addEventListener("tap",function(){
+				mui.openWindow({
+					url: "Wish_detail.html",
+					id: "Wish_detail.html",
+					waiting: {
+						autoShow: false
+					}
+				});	
+			});
+
 		</script>
 
 	</body>

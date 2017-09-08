@@ -60,7 +60,7 @@
 		    }
 		    .tiyan_ul_L>img{border-radius: 5px;
 	            
-		         margin-left: 2%;
+		         /*margin-left: 2%;*/
 		    }
 		    .tiyan_ul_R{
 		    	float: left;
@@ -198,7 +198,7 @@
                             </div>
                         </li>
                         <li style="float: left;margin-top: 6%">
-                            <button type="button" onclick="window.location.href='Wish_detail.html'" class="mui-btn openUrl mui-btn-danger">去预定</button>
+                            <button id="button2" type="button" onclick="window.location.href='Wish_detail.html'" class="mui-btn openUrl mui-btn-danger">去预定</button>
                             <span class="reserve_money">150/人</span>
                             <!--<p style="float: right;margin-top: 6%;margin-right: 3%;">已服务955人</p>-->
                         </li>
@@ -240,7 +240,33 @@
                }*/
               })
          });
-         
+         mui("#all")[0].addEventListener("tap",function(){
+				mui.openWindow({
+					url: "xinyuan_index.html",
+					id: "xinyaun_index.html",
+					waiting: {
+						autoShow: false
+					}
+				});	
+			});
+		mui("#button1")[0].addEventListener("tap",function(){
+				mui.openWindow({
+					url: "Wish_detail.html",
+					id: "Wish_detail.html",
+					waiting: {
+						autoShow: false
+					}
+				});	
+			});
+			mui("#button2")[0].addEventListener("tap",function(){
+				mui.openWindow({
+					url: "Wish_detail.html",
+					id: "Wish_detail.html",
+					waiting: {
+						autoShow: false
+					}
+				});	
+			});
 		</script>
 	</body>
 
