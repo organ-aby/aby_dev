@@ -771,7 +771,10 @@
 					"fonts/iconfont.ttf",
 					"images/news_long_img.jpg",
 					"images/gushi_img/wenhua/huanlegu.jpg",
-					"images/gushi_img/SearchExper/Xihu.jpg"
+					"images/gushi_img/SearchExper/Xihu.jpg",
+					"css/iconfont.css",
+					"fonts/mui.ttf",
+					"images/gushi_img/wenhua/chuanjutuhuo.jpg"
 				],
 				"refer": [
 					"main/story/story_wenhua.html",
@@ -816,7 +819,8 @@
 					"images/gushi_img/yundong/Runing.jpg",
 					"images/gushi_img/wenhua/wushi.jpg",
 					"images/gushi_img/qinzi/zhaicaomei.jpg",
-					"images/gushi_img/yule/minzwuu.jpg"
+					"images/gushi_img/yule/minzwuu.jpg",
+					"fonts/iconfont.ttf"
 				],
 				"refer": [
 					"main/story/story_wenhua.html"
@@ -923,7 +927,10 @@
 					"fonts/iconfont.ttf",
 					"images/gushi_img/wenhua/laomatouhuoguo.jpg"
 				],
-				"refer": [],
+				"refer": [
+					"main/xinyuan_index.html",
+					"main/Wish_detail.html"
+				],
 				"priority": 0
 			},
 			"main/goutong_xiangqing.html": {
