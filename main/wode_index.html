@@ -12,7 +12,7 @@
 			.dingbu_div{
                 /*background-color:#2792c3;*/
                 background-image: url("../images/wode_img/beijintupian.jpg");
-                height: 150px;margin-bottom: 2%;}
+                height: 150px;margin-bottom: 5px;}
 			.toubu_div{width: 100%;height: 60px;
 			/*background-color: wheat;*/
 			
@@ -79,7 +79,9 @@
 		    	</ul>
 		    </div>
 		</div>
-	<!--广告-->	<img src="../images/wode_img/insurance_img1.jpg" style="width: 100%;margin-top: -7px;"/>
+		<div class="ad">
+	<!--广告-->	<img src="../images/wode_img/insurance_img1.jpg" style="width: 100%;"/>
+		</div>
 		<div >
 			<ul class="mui-table-view">
 				<li class="mui-table-view-cell">
@@ -149,6 +151,18 @@
                     }
                 });
             });
+            
+            mui(".ad")[0].addEventListener("tap",function(){
+                mui.openWindow({
+                    url: "safe_attention.html",
+                    id: "safe_attention.html",
+                    waiting: {
+                        autoShow: false
+                    }
+                });
+            });
+            
+            
             
             mui(".dibulist_div").on("tap",".mui-table-view-cell",function(){
             	var url = this.getAttribute("data-url");
