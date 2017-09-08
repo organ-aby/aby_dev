@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			#list {
+				/*避免导航边框和列表背景边框重叠，看起来像两条边框似得；*/
+				margin-top: -1px;
+			}
+			li{font-family: helvetica}
+			.tittle_goutong{width: 100%;background-color:white;height: 8%;padding-top: 2%;}
+			.tittle_goutong>p{width: 100%;text-align: center;color:#666666;}
+			.fuwu{height: 1rem;margin-top:0.2rem;padding-left: 5%;color: #666666;}
+            .duihua_touxiang{width: 24px;height: 24px;border-radius: 24px;
+                position: relative;top: 0.3rem;left: 1px;;
+            }
+		</style>
+	</head>
+
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">沟通</h1>
+		</header>
+		
+		<div class="mui-content">
+			<p class="fuwu">服务</p>
+			<ul id="server" class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell" data-href="goutong_xiangqing.html">
+					<a class="mui-navigate-right">
+						<span class="mui-icon mui-icon-contact" style="color: #59b9c6"></span>&nbsp;在线客服
+					</a>
+				</li>
+				<li class="mui-table-view-cell" data-href="goutong_translate.html">
+					<a class="mui-navigate-right">
+						<span class="mui-icon mui-icon-phone" style="color:#d66a35"></span>&nbsp;电话翻译服务
+					</a>
+				</li>
+			</ul>
+				<p class="fuwu">对话信息</p>
+			<ul id="list" class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+                        <img src="../images/wode_img/gloria.jpg" class="duihua_touxiang">&nbsp;&nbsp;Delevingne
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+                        <img src="../images/wode_img/jiangyiyan1.jpg" class="duihua_touxiang">&nbsp;&nbsp;Sophie
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+                        <img src="../images/wode_img/yagmi.jpg" class="duihua_touxiang">&nbsp;&nbsp;Yang Mi
+					</a>
+				</li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/jiangyiyan.jpg" class="duihua_touxiang">&nbsp;&nbsp;Gloria
+                    </a>
+                </li>
+
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/Scarlett.jpg" class="duihua_touxiang">&nbsp;&nbsp;Scarlett
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/Taylor.jpg" class="duihua_touxiang">&nbsp;&nbsp;Taylor
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/Dennings.jpg" class="duihua_touxiang">&nbsp;&nbsp;Dennings
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/Hathaway.jpg" class="duihua_touxiang">&nbsp;&nbsp;Hathaway
+                    </a>
+                </li>
+			</ul>
+		</div>
+		<br />
+		<br />
+		<br />
+
+		
+
+
+    <!--    <nav class="mui-bar mui-bar-tab ">
+            <a class="mui-tab-item "  onclick="window.location.href='story_index.html'">
+                <span class="mui-icon mui-icon-home"></span>
+            </a>
+            <a class="mui-tab-item " onclick="window.location.href='search_index.html'">
+                <span class="mui-icon mui-icon-search"></span>
+            </a>
+            <a class="mui-tab-item " onclick="window.location.href='xinyuan_index.html'">
+                <span class="mui-icon mui-icon-star"></span>
+            </a>
+            <a class="mui-tab-item mui-active" onclick="window.location.href='goutong_index.html'">
+                <span class="mui-icon mui-icon-phone"></span>
+            </a>
+            <a class="mui-tab-item "  onclick="window.location.href='wode_index.html'">
+                <span class="mui-icon mui-icon-person"></span>
+            </a>
+        </nav>
+-->
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			mui("#server").on("tap",".mui-table-view-cell",function(){
+            	var url = this.getAttribute("data-href");
+            	if(url!=""){
+	            	mui.openWindow({
+	                    url: url,
+	                    id: url,
+	                    waiting: {
+	                        autoShow: false
+	                    }
+	                });
+            	}
+            });
+		</script>
+	</body>
+
+</html>

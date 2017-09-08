@@ -1,130 +1,281 @@
 <!doctype html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link href="../css/mui.min.css" rel="stylesheet" />
+				<link href="../css/mui.picker.css" rel="stylesheet" />
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
 		<style type="text/css">
 			#list {
 				/*避免导航边框和列表背景边框重叠，看起来像两条边框似得；*/
 				margin-top: -1px;
+				font-size: 14px;
 			}
+			body{background-color: ;}
 			li{font-family: helvetica}
-			.tittle_goutong{width: 100%;background-color:white;height: 8%;padding-top: 2%;}
-			.tittle_goutong>p{width: 100%;text-align: center;color:#666666;}
+
+			.modul_div{
+				width: 95%;
+				height: 90px;
+				/*background-color: salmon;*/
+				border-radius: 5px;
+			}
+			.value_add{margin-top: 10px;}
+			.pingdanchuyou>img{width: 70px;height: 60px;margin-left: -3%;margin-top:9%;border-radius: 10px;}
 			.fuwu{height: 1rem;margin-top:0.2rem;padding-left: 5%;color: #666666;}
             .duihua_touxiang{width: 24px;height: 24px;border-radius: 24px;
                 position: relative;top: 0.3rem;left: 1px;;
             }
+            .com_time{
+            	float: right;
+            	font-size: 14px;
+            	color: #a99e93;
+            	padding-top: 0.4rem;
+            	
+            }
+            .mui-grid-view.mui-grid-9 .mui-table-view-cell{
+            	border: none;
+            	padding: 0 15px;
+            }
+            #jinji_phone{margin-left: 36%;margin-top: 2%;width: 100px;height: 100px;}
+			.fuwu_yingji{width:100%;padding: 0;margin: 0;
+			/*background-color: #d3cfd9;*/
+			}
+            /*服务字体颜色*/
+			.fuwu_yingji>li{color: #696969;}
+			li.title{				
+				text-align: center;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.jfk-button-img {
+			    background-repeat: no-repeat;
+			    display: inline-block;
+			    height: 24px!important;
+			    width: 24px!important;
+			    background-image: url(../images/1x_mobile.png);
+			    /*适配高分屏*/
+			    background-image: -webkit-image-set(url(../images/1x_mobile.png) 1x,url(../images/2x_mobile.png) 2x);
+			}
+			.arrow.jfk-button-img {
+			    background-position: 0 -168px;
+			}
+			.arrow {
+			    display: inline-block;
+			    position: absolute;
+			    right: 4px;
+			    top: 6px;
+			    width: 0px;
+			}
+			.ls-wrap{
+				border-top:1px solid #CCCCCC ;
+				border-bottom:1px solid #CCCCCC ;
+				background-color: #FFFFFF;
+				height: 40px;
+				line-height: 40px;
+			}
+			.sl-selector{width: 40%;float: left;text-align: center;    position: relative;}
+			.swap-wrap{
+				width: 20%;
+				float: left;
+				text-align: center;
+				border-left:1px solid #CCCCCC;
+				border-right:1px solid #CCCCCC ;
+				
+			}
+			.swap-wrap img{
+				vertical-align: -2px;
+			}
+			.sl-selector a{color: #000000;}
+			
+			.ui-alert {
+				text-align: center;
+				padding: 20px 10px;
+				font-size: 16px;
+			}
 		</style>
 	</head>
 
+
+          <!--餐厅就餐，酒店入住，叫车出行，景点游览， 商店购物，休闲娱乐-->
 	<body>
 		<header id="header" class="mui-bar mui-bar-nav">
-			<h1 class="mui-title">沟通</h1>
+			<h1 class="mui-title">客服服务</h1>
 		</header>
 		
-		<div class="mui-content">
-			<p class="fuwu">服务</p>
-			<ul id="server" class="mui-table-view mui-table-view-chevron">
-				<li class="mui-table-view-cell" data-href="goutong_xiangqing.html">
-					<a class="mui-navigate-right">
-						<span class="mui-icon mui-icon-contact" style="color: #59b9c6"></span>&nbsp;在线客服
-					</a>
-				</li>
-				<li class="mui-table-view-cell" data-href="goutong_translate.html">
-					<a class="mui-navigate-right">
-						<span class="mui-icon mui-icon-phone" style="color:#d66a35"></span>&nbsp;电话翻译服务
-					</a>
-				</li>
-			</ul>
-				<p class="fuwu">对话信息</p>
-			<ul id="list" class="mui-table-view mui-table-view-chevron">
-				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
-                        <img src="../images/wode_img/gloria.jpg" class="duihua_touxiang">&nbsp;&nbsp;Delevingne
-					</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
-                        <img src="../images/wode_img/jiangyiyan1.jpg" class="duihua_touxiang">&nbsp;&nbsp;Sophie
-					</a>
-				</li>
-				<li class="mui-table-view-cell">
-					<a class="mui-navigate-right">
-                        <img src="../images/wode_img/yagmi.jpg" class="duihua_touxiang">&nbsp;&nbsp;Yang Mi
-					</a>
-				</li>
-                <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right">
-                        <img src="../images/wode_img/jiangyiyan.jpg" class="duihua_touxiang">&nbsp;&nbsp;Gloria
-                    </a>
-                </li>
-
-                <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right">
-                        <img src="../images/wode_img/Scarlett.jpg" class="duihua_touxiang">&nbsp;&nbsp;Scarlett
-                    </a>
-                </li>
-                <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right">
-                        <img src="../images/wode_img/Taylor.jpg" class="duihua_touxiang">&nbsp;&nbsp;Taylor
-                    </a>
-                </li>
-                <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right">
-                        <img src="../images/wode_img/Dennings.jpg" class="duihua_touxiang">&nbsp;&nbsp;Dennings
-                    </a>
-                </li>
-                <li class="mui-table-view-cell">
-                    <a class="mui-navigate-right">
-                        <img src="../images/wode_img/Hathaway.jpg" class="duihua_touxiang">&nbsp;&nbsp;Hathaway
-                    </a>
-                </li>
-			</ul>
+		<div class="mui-content" style="padding-top:54px;">
+			<input id='showCityPicker3' type="text" placeholder="请选择所在地" style="margin-bottom: 10px;" />
 		</div>
-		<br />
-		<br />
-		<br />
-
 		
+		<div class="ls-wrap mui-clearfix">
+			<div class="sl-selector lang_list">
+				<a>自动检测</a>
+				<div class="arrow jfk-button-img"></div>
+			</div>
+			<div class="swap-wrap"><img src="../images/b_arrows.png" style="width: 26%;"></div>
+			<div class="sl-selector lang_list">
+				<a>中文</a>
+				<div class="arrow jfk-button-img"></div>
+			</div>
+		</div>
+		
+		 <div class="value_add" >
+			<ul id="scenes" class="mui-table-view mui-grid-view mui-grid-9 clearfix" style="background-color: white">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" style="">
+					<a href="#">
+						<div class="modul_div">
+							<!--拼单出游-->
+							<span class="pingdanchuyou">
+								<img src="../images/wode_img/dining room1.jpg"/>
+							</span>
+							<p style="color: #333;">餐厅就餐</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" style="background-color:">
+					<a href="#">
+						<!--<p>接送机</p>-->
+						<div class="modul_div">
+							<span class="pingdanchuyou">
+								<img src="../images/wode_img/hotel.jpg"/>
+							</span>
+							<p style="color: #333;">酒店入住</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" style="background-color: ">
+					<a href="#">
+						<div class="modul_div">
+							<span class="pingdanchuyou">
+								<img src="../images/wode_img/takeataxi.jpg"/>
+							</span>
+							<p style="color: #333;">叫车出行</p>
+						</div>
+						<!--<div class="mui-media-body">保险</div>-->
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" style="">
+					<a href="#">
+                        <div class="modul_div">
+							<span class="pingdanchuyou">
+								<img src="../images/wode_img/scenicspot1.jpg"/>
+							</span>
+							<p style="color: #333;">景点游览</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" style="background-color: ">
+					<a href="#">
+                        <div class="modul_div">
+							<span class="pingdanchuyou">
+								<img src="../images/wode_img/shopping1.jpg"/>
+							</span>
+                            <p style="color: #333;">商店购物</p>
+                        </div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" style="background-color: ">
+					<a href="#">
+                        <div class="modul_div">
+							<span class="pingdanchuyou">
+								<img src="../images/wode_img/relaxation.jpg"/>
+							</span>
+                            <p style="color: #333;">休闲娱乐</p>
+                        </div>
+					</a>
+				</li>
+			</ul>
+		
+		 
+		 <p class="fuwu">客服记录</p>
+			<ul id="list" class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell ">
+					<a class="mui-navigate-right">
+                        <img src="../images/wode_img/gloria.jpg" class="duihua_touxiang">
+                        &nbsp;&nbsp;餐厅就餐-Delevingne
+					    <span class="com_time">18:21</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+                        <img src="../images/wode_img/jiangyiyan1.jpg" class="duihua_touxiang">&nbsp;&nbsp;酒店入住-Sophie
+						<span class="com_time">18:21</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+                        <img src="../images/wode_img/yagmi.jpg" class="duihua_touxiang">&nbsp;&nbsp;叫车出行-Yang Mi
+					<span class="com_time">18:21</span>
+					</a>
+				</li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/jiangyiyan.jpg" class="duihua_touxiang">&nbsp;&nbsp;景点旅游-Gloria
+                    	<span class="com_time">18:21</span>
+                    </a>
+                </li>
 
-
-    <!--    <nav class="mui-bar mui-bar-tab ">
-            <a class="mui-tab-item "  onclick="window.location.href='story_index.html'">
-                <span class="mui-icon mui-icon-home"></span>
-            </a>
-            <a class="mui-tab-item " onclick="window.location.href='search_index.html'">
-                <span class="mui-icon mui-icon-search"></span>
-            </a>
-            <a class="mui-tab-item " onclick="window.location.href='xinyuan_index.html'">
-                <span class="mui-icon mui-icon-star"></span>
-            </a>
-            <a class="mui-tab-item mui-active" onclick="window.location.href='goutong_index.html'">
-                <span class="mui-icon mui-icon-phone"></span>
-            </a>
-            <a class="mui-tab-item "  onclick="window.location.href='wode_index.html'">
-                <span class="mui-icon mui-icon-person"></span>
-            </a>
-        </nav>
--->
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/Scarlett.jpg" class="duihua_touxiang">&nbsp;&nbsp;商品购物-Scarlett
+                    <span class="com_time">18:21</span>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/Taylor.jpg" class="duihua_touxiang">&nbsp;&nbsp;休闲娱乐-Taylor
+                    <span class="com_time">18:21</span>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/Dennings.jpg" class="duihua_touxiang">&nbsp;&nbsp;商品购物-Dennings
+                    <span class="com_time">18:21</span>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">
+                        <img src="../images/wode_img/Hathaway.jpg" class="duihua_touxiang">&nbsp;&nbsp;商品购物-Hathaway
+                    <span class="com_time">18:21</span>
+                    </a>
+                </li>
+			</ul>
+		 </div>
+		
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.picker.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			mui.init();
+			mui.init()
 			
-			mui("#server").on("tap",".mui-table-view-cell",function(){
-            	var url = this.getAttribute("data-href");
-            	if(url!=""){
-	            	mui.openWindow({
-	                    url: url,
-	                    id: url,
-	                    waiting: {
-	                        autoShow: false
-	                    }
-	                });
-            	}
+						//级联示例
+			var cityPicker3 = new mui.PopPicker({
+				layer: 3
+			});
+			cityPicker3.setData(cityData3);
+			var showCityPickerButton = document.getElementById('showCityPicker3');
+			showCityPickerButton.addEventListener('tap', function(event) {
+				cityPicker3.show(function(items) {
+					showCityPickerButton.value = (items[0] || {}).text + "--" + (items[1] || {}).text + "--" + (items[2] || {}).text;
+					//返回 false 可以阻止选择框的关闭
+					//return false;
+				});
+			}, false);
+			
+			mui("#scenes").on("tap",".mui-table-view-cell",function(){
+            	mui.openWindow({
+                	url: "goutong_xiangqing.html",
+                    id: "goutong_xiangqing.html",
+                    waiting: {
+                        autoShow: false
+                    }
+                });
             });
 		</script>
 	</body>
