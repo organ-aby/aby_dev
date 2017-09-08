@@ -626,7 +626,11 @@
 					"images/gushi_img/wenhua/jiaotong.jpg",
 					"images/gushi_img/wenhua/chaguan.jpg",
 					"images/gushi_img/wenhua/shunxinlaochaguan.jpg",
-					"images/gushi_img/wenhua/touxiang1.jpg"
+					"images/gushi_img/wenhua/touxiang1.jpg",
+					"images/gushi_img/wenhua/jinli.jpg",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"fonts/iconfont.ttf"
 				],
 				"refer": [],
 				"priority": 0
@@ -814,14 +818,22 @@
 					"images/gushi_img/qinzi/zhaicaomei.jpg",
 					"images/gushi_img/yule/minzwuu.jpg"
 				],
-				"refer": [],
+				"refer": [
+					"main/story/story_wenhua.html"
+				],
 				"priority": 0
 			},
 			"main/xinyuan_index.html": {
 				"resources": [
 					"images/gushi_img/wenhua/jinli.jpg",
 					"images/gushi_img/wenhua/wuhouci.jpg",
-					"main/wish_index.html"
+					"main/wish_index.html",
+					"fonts/iconfont.ttf",
+					"main/Wish_detail.html",
+					"js/mui.min.js",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"images/gushi_img/wenhua/laomatouhuoguo.jpg"
 				],
 				"refer": [],
 				"priority": 0
@@ -840,7 +852,8 @@
 					"images/wode_img/daidingxingcheng_tubiao(1).png",
 					"images/wode_img/daifukuan_tubiao.png",
 					"images/wode_img/protection.png",
-					"images/wode_img/xitongtubiao.png"
+					"images/wode_img/xitongtubiao.png",
+					"images/wode_img/insurance_img1.jpg"
 				],
 				"refer": [
 					"main/safe_attention.html"
@@ -856,7 +869,22 @@
 					"images/wode_img/Scarlett.jpg",
 					"images/wode_img/yagmi.jpg",
 					"images/wode_img/Dennings.jpg",
-					"images/wode_img/Hathaway.jpg"
+					"images/wode_img/Hathaway.jpg",
+					"js/mui.picker.js",
+					"images/2x_mobile.png",
+					"css/mui.picker.css",
+					"images/wode_img/shopping1.jpg",
+					"images/wode_img/relaxation.jpg",
+					"js/city.data-3.js",
+					"images/wode_img/hotel.jpg",
+					"js/mui.poppicker.js",
+					"images/wode_img/dining room1.jpg",
+					"images/b_arrows.png",
+					"js/city.data.js",
+					"css/mui.poppicker.css",
+					"images/wode_img/scenicspot1.jpg",
+					"images/wode_img/takeataxi.jpg",
+					"css/mui.min.css"
 				],
 				"refer": [
 					"main/goutong_xiangqing.html",
@@ -908,7 +936,9 @@
 					"js/mui.js",
 					"images/wode_img/cheat1.jpg",
 					"css/mui.css",
-					"images/xiangce.png"
+					"images/xiangce.png",
+					"images/wode_img/cheat2.jpg",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
