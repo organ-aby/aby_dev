@@ -149,7 +149,7 @@
 				for (var name in self) {
 					self[name] = null;
 					delete self[name];
-				};
+				};z
 				self.disposed = true;
 			}, 300);
 		}

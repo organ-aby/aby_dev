@@ -6,6 +6,9 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
+		<link href="../css/mui.picker.css" rel="stylesheet" />
+
 		<style type="text/css">
 			#list {
 				/*避免导航边框和列表背景边框重叠，看起来像两条边框似得；*/
@@ -51,8 +54,8 @@
 		 <div class="value_add" >
 			<ul class="mui-table-view mui-grid-view mui-grid-9" style="background-color: white">
 				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="">
-					<a href="#">
-						<div class="modul_div">
+					<a href="#" id="showUserPicker">
+						<div class="modul_div" id="alertBtn">
 							<!--拼单出游-->
 							<span class="pingdanchuyou">
 								<img src="../images/wode_img/dining room1.jpg"/>
@@ -166,15 +169,36 @@
                         <img src="../images/wode_img/Hathaway.jpg" class="duihua_touxiang">&nbsp;&nbsp;Hathaway
                     <span class="com_time">18:21</span>
                     </a>
-                </li>
+                </li> 
 			</ul>
 		 </div>
+		 
+		<div class="mui-popup mui-popup-in popupbox_style" style="display: ;" id="popupbox">
+			<div class="mui-popup-inner">
+				<ul class="mui-table-view">
+				 <li class="mui-table-view-cell">在线客服</li>
+		         <li class="mui-table-view-cell">电话翻译</li>
+			 </ul>
+			</div>
+		</div>
+		
 		
 		<script src="../js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init();
+		<script src="../js/mui.poppicker.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//mui初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
 			
+			var info = document.getElementById("info");
+			document.getElementById("alertBtn").addEventListener('tap', function() {
+					 var ui = document.getElementById("popupbox");
+                     ui.style.display="block";
+				});
+		
 			
+
 		</script>
 	</body>
 
