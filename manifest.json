@@ -774,7 +774,8 @@
 					"images/gushi_img/SearchExper/Xihu.jpg",
 					"css/iconfont.css",
 					"fonts/mui.ttf",
-					"images/gushi_img/wenhua/chuanjutuhuo.jpg"
+					"images/gushi_img/wenhua/chuanjutuhuo.jpg",
+					"images/gushi_img/shanghaicity.jpg"
 				],
 				"refer": [
 					"main/story/story_wenhua.html",
@@ -820,7 +821,17 @@
 					"images/gushi_img/wenhua/wushi.jpg",
 					"images/gushi_img/qinzi/zhaicaomei.jpg",
 					"images/gushi_img/yule/minzwuu.jpg",
-					"fonts/iconfont.ttf"
+					"fonts/iconfont.ttf",
+					"images/gushi_img/wenhua/xunyicao.jpg",
+					"images/gushi_img/wenhua/Louvre.jpg",
+					"images/gushi_img/wenhua/thermidor.jpg",
+					"images/gushi_img/wenhua/disini.jpg",
+					"images/gushi_img/wenhua/kingkong.jpg",
+					"images/gushi_img/wenhua/diaojiaolou.jpg",
+					"images/gushi_img/wenhua/xihujuxianting.jpg",
+					"images/gushi_img/wenhua/chuanjutuhuo1.jpg",
+					"images/gushi_img/wenhua/Santorini.jpg",
+					"images/gushi_img/wenhua/tailingji.jpg"
 				],
 				"refer": [
 					"main/story/story_wenhua.html"
