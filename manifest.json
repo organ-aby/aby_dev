@@ -203,20 +203,20 @@
 					"iphone": {
 						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
 						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": "C:/Users/aci/Desktop/mobile-bg-img.png",
-						"retina55": "C:/Users/aci/Desktop/mobile-bg-img.png",
-						"retina47": "C:/Users/aci/Desktop/mobile-bg-img.png",
-						"retina55l": "C:/Users/aci/Desktop/mobile-bg-img.png"
+						"retina40": "index/mobile-bg-img.png",
+						"retina55": "index/mobile-bg-img.png",
+						"retina47": "index/mobile-bg-img.png",
+						"retina55l": "index/mobile-bg-img.png"
 					},
 					"ipad": {
-						"portrait": "C:/Users/aci/Desktop/mobile-bg-img.png", /*iPad竖屏启动图片，分辨率：768x1004*/
-						"portrait-retina": "C:/Users/aci/Desktop/mobile-bg-img.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-						"landscape": "C:/Users/aci/Desktop/mobile-bg-img.png", /*iPad横屏启动图片，分辨率：1024x748*/
-						"landscape-retina": "C:/Users/aci/Desktop/mobile-bg-img.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-						"portrait7": "C:/Users/aci/Desktop/mobile-bg-img.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
-						"portrait-retina7": "C:/Users/aci/Desktop/mobile-bg-img.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-						"landscape7": "C:/Users/aci/Desktop/mobile-bg-img.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-						"landscape-retina7": "C:/Users/aci/Desktop/mobile-bg-img.png"
+						"portrait": "index/mobile-bg-img.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "index/mobile-bg-img.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "index/mobile-bg-img.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "index/mobile-bg-img.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "index/mobile-bg-img.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "index/mobile-bg-img.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "index/mobile-bg-img.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": "index/mobile-bg-img.png"
 					}
 				},
 				"android": {
